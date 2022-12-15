@@ -121,12 +121,12 @@
   overflow: auto;
   scrollbar-width: none;
   /* For Firefox */
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
   /* For Internet Explorer and Edge */
 }
-.swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
+/* .swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
   display: none;
-}
+} */
 .swiper-css-mode > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: start start;
 }
@@ -320,8 +320,8 @@ button.swiper-pagination-bullet {
   margin: 0;
   padding: 0;
   box-shadow: none;
-  -webkit-appearance: none;
-          appearance: none;
+  /* -webkit-appearance: none;
+          appearance: none; */
 }
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
@@ -415,7 +415,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
-  -ms-touch-action: none;
+  /* -ms-touch-action: none; */
   background: rgba(0, 0, 0, 0.1);
 }
 .swiper-scrollbar-disabled > .swiper-scrollbar,
@@ -542,10 +542,10 @@ button.swiper-pagination-bullet {
 .swiper-fade .swiper-slide .swiper-slide {
   pointer-events: none;
 }
-.swiper-fade .swiper-slide-active,
+/* .swiper-fade .swiper-slide-active,
 .swiper-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto;
-}
+} */
 .swiper-cube {
   overflow: visible;
 }
@@ -563,15 +563,15 @@ button.swiper-pagination-bullet {
 .swiper-cube.swiper-rtl .swiper-slide {
   transform-origin: 100% 0;
 }
-.swiper-cube .swiper-slide-active,
+/* .swiper-cube .swiper-slide-active,
 .swiper-cube .swiper-slide-active .swiper-slide-active {
   pointer-events: auto;
-}
+} */
 .swiper-cube .swiper-slide-active,
 .swiper-cube .swiper-slide-next,
 .swiper-cube .swiper-slide-prev,
 .swiper-cube .swiper-slide-next + .swiper-slide {
-  pointer-events: auto;
+  /* pointer-events: auto; */
   visibility: visible;
 }
 .swiper-cube .swiper-slide-shadow-top,
@@ -609,10 +609,10 @@ button.swiper-pagination-bullet {
 .swiper-flip .swiper-slide .swiper-slide {
   pointer-events: none;
 }
-.swiper-flip .swiper-slide-active,
+/* .swiper-flip .swiper-slide-active,
 .swiper-flip .swiper-slide-active .swiper-slide-active {
   pointer-events: auto;
-}
+} */
 .swiper-flip .swiper-slide-shadow-top,
 .swiper-flip .swiper-slide-shadow-bottom,
 .swiper-flip .swiper-slide-shadow-left,
