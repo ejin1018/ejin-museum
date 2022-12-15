@@ -969,21 +969,21 @@ header,footer,[class*='-container']{
             margin-bottom: 0;
           }
         .certify-sticker{
-          width: 50%;
+          width: 55%;
           float: right;
           margin-top: 20px;
         }
-          .certify-text{
-            width: 45%;
-            margin-right: 10%;
+          .certify-btn{
+            display: block;
+            width: 42%;
+            margin-right: 5%;
             float: left;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            font-size: 14px;
-            word-break: keep-all;
-            text-align: center;
-            box-sizing: border-box;
           }
-          .certify-text:last-child{
+          .certify-btn:last-child{
+            width: 53%;
             margin-right: 0;
           }
+            .certify-btn img{
+              display: block;
+              width: 100%;
+            }
