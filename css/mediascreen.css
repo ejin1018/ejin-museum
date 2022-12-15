@@ -2,7 +2,12 @@
 
 /* smaller desktop */
 @media screen and (max-width:980px) {
-  
+  body{
+    background: aliceblue;
+  }
+  .gnb-bot-list{
+    display: none;
+  }
 }
 /* tablet */
 @media screen and (max-width:768px) {
