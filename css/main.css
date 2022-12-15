@@ -468,7 +468,8 @@ header,footer,[class*='-container']{
           .nation-poster{
             display: block;
             position: relative;
-            min-height: 470px;
+            max-height: 450px;
+            overflow: hidden;
           }
           .poster-dim{
             opacity: 0;
