@@ -38,3 +38,8 @@ table {
 a, a:link, a:visited, a:focus{
 	text-decoration:none;
 }
+/* 계단 현상 완화 */
+body {
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale;
+}

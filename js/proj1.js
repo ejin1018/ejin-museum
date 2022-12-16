@@ -102,10 +102,11 @@ window.addEventListener('DOMContentLoaded',()=>{
   let liLength = ExhLi.length;
   let prev = document.querySelector('.nExh-prev');
   let next = document.querySelector('.nExh-next');
-  let liWidth = 315;
+  let liWidth = ExhLi[0].clientWidth;
   let liMargin = 60;
 
   ExhUl.style.width = (liWidth + liMargin) * liLength + 'px' ;
+  console.log(ExhUl.style.width);
   
   function ExhMove(num){
     ExhUl.style.left = - num * (liWidth + liMargin) + 'px';
