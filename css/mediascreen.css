@@ -107,15 +107,188 @@
   body{
     background: lavender;
   }
+  header, footer, [class*='-container']{
+    width: 90%;
+  }
   .utility-wrap, .gnb-container{
     display: none;
   }
   .mobile-header{
+    display: inline-block;
+    width: 100%;
+    padding-top: 35px;
+  }
+  .logo{
+    float: left;
+    width: auto;
+  }
+  .logo-btn img{
     display: block;
   }
+  .mobile-header-btns{
+    float: right;
+  }
+    .search-btn{
+      display: inline-block;
+      width: 38px;
+      margin-right: 20px;
+    }
+    .mobile-open{
+      display: inline-block;
+      width: 40px;
+      border: none;
+      background: transparent;
+      padding: 5px 0;
+    }
+      .mobile-open img{
+        display: block;
+      }
   .mobile-wrap{
-    display: block;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: aliceblue;
   }
+  .mobile-header-open{
+    width: 90%;
+    margin: 0 auto;
+  }
+    .mobile-open-top{
+      display: inline-block;
+      width: 100%;
+    }
+      .mobile-lang{
+        position: relative;
+        float: left;
+        width: 23%;
+        padding: 20px 0;
+        border-top: 3px solid #222;
+        font-size: 21px;
+        font-weight: 500;
+        color: #444;
+        text-align: center;
+        cursor: pointer;
+      }
+      .mobile-lang:hover{
+        background: #222;
+        color: #fff;
+      }
+        .mobile-arrow-down{
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          margin: 0 0 1px 10px;
+          border-bottom: solid 2px #444;
+          border-left: solid 2px #444;
+          transform: rotate(-45deg);
+          transition: all .4s;
+        }
+        .mobile-lang:hover .mobile-arrow-down{
+          margin: 0 0 -5px 10px;
+          border-bottom: solid 2px #fff;
+          border-left: solid 2px #fff;
+          transform: rotate(135deg);
+        }
+        .mobile-lang-list{
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+        }
+        .mobile-lang:hover .mobile-lang-list{
+          display: block;
+        }
+          .util-sub-btn{
+            padding: 15px 0;
+            font-size: 21px;
+            font-weight: 500;
+          }
+        .mobile-close{
+          display: block;
+          float: right;
+          margin-top: 30px;
+        }
+          .mobile-close img{
+            display: block;
+          }
+    .quick-menu{
+      margin-top: 50px;
+    }
+      .quick-menu-title{
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      .mobile-login{
+        display: block;
+        float: left;
+        font-size: 38px;
+        font-weight: 700;
+        color: #222;
+      }
+      .mobile-log-btns{
+        float: right;
+      }
+        .mobile-logbtn{
+          display: inline-block;
+          margin-left: 25px;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 55px;
+          color: #222;
+        }
+      .quick-sub{
+        overflow: hidden;
+        padding: 25px;
+        border-top: 1px solid #444;
+        background: #f4f4f4;
+      }
+        .quick-sub li{
+          width: 50%;
+          float: left;
+          margin-bottom: 35px;
+        }
+        .quick-sub li:last-child{
+          margin-bottom: 0;
+        }
+          .quick-sub-btn{
+            display: inline-block;
+            color: #222;
+            font-size: 24px;
+            font-weight: 500;
+          }
+            .quick-sub-btn span{
+              display: block;
+              float: left;
+              width: 35px;
+              height: 35px;
+              margin-right: 15px;
+            }
+              .qsb0 span{
+                background: url(../img/m_menu-icon00.png) no-repeat;
+                background-size: contain;
+              }
+              .qsb1 span{
+                background: url(../img/m_menu-icon01.png) no-repeat;
+                background-size: contain;
+              }
+              .qsb2 span{
+                background: url(../img/m_menu-icon02.png) no-repeat;
+                background-size: contain;
+              }
+              .qsb3 span{
+                background: url(../img/m_menu-icon03.png) no-repeat;
+                background-size: contain;
+              }
+              .qsb4 span{
+                background: url(../img/m_menu-icon04.png) no-repeat;
+                background-size: contain;
+              }
+  
 }
 /* tablet */
 @media screen and (max-width:768px) {

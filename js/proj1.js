@@ -123,4 +123,16 @@ window.addEventListener('DOMContentLoaded',()=>{
       ExhMove(nowIndex + 1);
     }
   });
+
+  // mobile menu
+  let mMenuOpen = document.querySelector('.mobile-open');
+  let mMenuClose = document.querySelector('.mobile-close');
+  let mMenu = document.querySelector('.mobile-wrap');
+
+  mMenuOpen.addEventListener('click',()=>{
+    mMenu.style.display = 'block';
+  });
+  mMenuClose.addEventListener('click',()=>{
+    mMenu.style.display = 'none';
+  });
 })
