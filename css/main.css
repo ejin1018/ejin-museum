@@ -305,6 +305,11 @@ header,footer,[class*='-container']{
         width: 100%;
       }
 
+/* mobile-menu */
+.mobile-wrap{
+  display: none;
+}
+
 /*intro*/
   .intro-container{
     padding-top: 35px;

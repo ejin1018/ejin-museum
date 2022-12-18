@@ -107,6 +107,9 @@
   body{
     background: lavender;
   }
+  .mobile-wrap{
+    display: block;
+  }
 }
 /* tablet */
 @media screen and (max-width:768px) {
