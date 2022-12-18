@@ -107,6 +107,12 @@
   body{
     background: lavender;
   }
+  .utility-wrap, .gnb-container{
+    display: none;
+  }
+  .mobile-header{
+    display: block;
+  }
   .mobile-wrap{
     display: block;
   }
