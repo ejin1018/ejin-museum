@@ -329,6 +329,22 @@
         font-weight: 400;
         color: #222;
       }
+/* intro */
+.main-info{
+  width: 100%;
+  flex-direction: column;
+}
+  .mus-info-area{
+    width: 100%;
+    margin: 0;
+  }
+    .info-title{
+      width: 100%;
+      font-size: 28px;
+    }
+  .mus-btn-area{
+    width: 100%;
+  }
 }
 /* tablet */
 @media screen and (max-width:768px) {
