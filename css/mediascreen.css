@@ -99,9 +99,6 @@
   .alright-info p, .alright-info a{
     text-align: left;
   }
-  .certify-sticker{
-    float: left;
-  }
 }
 @media screen and (max-width:980px) {
   body{
