@@ -101,9 +101,6 @@
   }
 }
 @media screen and (max-width:980px) {
-  body{
-    background: lavender;
-  }
   header, footer, [class*='-container']{
     width: 90%;
   }
@@ -146,6 +143,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
     z-index: 999;
     background: #fff;
   }
@@ -326,28 +325,213 @@
         font-weight: 400;
         color: #222;
       }
-/* intro */
-.main-info{
-  width: 100%;
-  flex-direction: column;
-}
-  .mus-info-area{
+  /* intro */
+  .main-info{
     width: 100%;
-    margin: 0;
+    flex-direction: column;
   }
-    .info-title{
+    .mus-info-area{
       width: 100%;
-      font-size: 28px;
+      margin: 0;
     }
-  .mus-btn-area{
-    width: 100%;
+      .info-time{
+        margin-bottom: 30px;
+      }
+      .info-fee{
+        margin-bottom: 35px;
+      }
+        .info-title{
+          width: 35%;
+          float: left;
+          font-size: 28px;
+        }
+        .info-text-box{
+          width: 65%;
+          float: left;
+          margin-top: 0px;
+        }
+          .info-text-box > p{
+            float: left;
+            font-size: 25px;
+          }
+          .info-text-timebox > p{
+            padding-bottom: 15px;
+          }
+          .info-sub-title{
+            width: 50%;
+            margin-right: 0;
+          }
+          .info-text{
+            width: 50%;
+            margin-right: 0;
+            font-weight: 400;
+          }
+          .info-text-timebox .info-endtime{
+            width: 100%;
+            padding-bottom: 0;
+            font-size: 21px;
+          }
+    .mus-btn-area{
+      width: 100%;
+      margin: 0 auto;
+    }
+      .main-btn-go{
+        height: 95px;
+        margin-top: 35px;
+        line-height: 95px;
+      }
+  /* notice */
+    .not-top-left{
+      width: 100%;
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+      .not-tab-radio label{
+        font-size: 28px;
+      }
+      .not-board-list > li{
+        list-style: 21px;
+      }
+        .board-link{
+          width: 80%;
+          font-size: 21px;
+        }
+        .board-post-date{
+          width: 20%;
+          font-size: 21px;
+          font-weight: 400;
+        }
+    .not-top-right{
+      width: 100%;
+    }
+  .notice-inner-bot{
+    margin-top: 50px;
   }
+    .not-bot-box{
+      width: 100%;
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+    .not-bot-box:last-child{
+      margin-bottom: 0;
+    }
+      .not-bot-title{
+        margin-bottom: 25px;
+      }
+      .not-edu-btn{
+        position: relative;
+        height: auto;
+      }
+        .not-edu-btn img{
+          position: relative;
+          top: auto;
+          left: auto;
+          transform: none;
+        }
+        .mkt-post-title{
+          margin-top: 20px;
+        }
+  /* sitemap */
+  .sitemap-container{
+    padding-top: 35px;
+  }
+    .sitemap-top-list > li{
+      display: none;
+    }
+    .sitemap-top-list > li:last-child{
+      display: block;
+      width: 100%;
+      margin-top: 0;
+    }
+      .sitemap-right-list{
+        width: 100%;
+        overflow: hidden;
+      }
+      .sitemap-right-list > li{
+        width: 50%;
+        float: left;
+      }
+  /* footer */
+  footer{
+    padding-top: 35px;
+  }
+    .footer-wrap{
+      margin-top: 35px;
+    }
 }
 /* tablet */
 @media screen and (max-width:768px) {
-  
+  /* footer */
+  .direct-inner{
+    width: 48%;
+  }
+    .direct-inner .direct-title{
+      width: 100%;
+      margin-right: 0;
+    }
+    .direct-inner .direct-title:last-child{
+      margin-bottom: 0;
+    }
+    .direct-btn{
+      font-size: 16px;
+    }
+.footer-right{
+  flex-direction: column;
+}
+  .policy-inner{
+    width: 100%;
+  }
+  .policy-list{
+    overflow: hidden;
+  }
+    .policy-list li{
+      float: left;
+      width: 33.3333%;
+      text-align: center;
+    }
+    .policy-list li:last-child{
+      margin-right: 0;
+    }
+      .policy-btn{
+        display: none;
+      }
+      .personal, .useragree, .theway{
+        display: inline-block;
+        font-size: 18px;
+      }
+  .alright-inner{
+    width: 100%;
+    margin-top: 55px;
+    margin-right: 0;
+  }
+    .footer-sns-list{
+      width: 80%;
+      margin: 0 auto 35px;
+    }
+      .footer-sns-btn img{
+        width: 28px;
+      }
+    .alright-info p, .alright-info a{
+      margin-bottom: 3px;
+    }
 }
 /* mobile */
 @media screen and (max-width:480px) {
-  
+  body{
+    background: aliceblue;
+  }
+  /* footer */
+  .footer-left{
+    flex-direction: column;
+  }
+    .system-inner{
+      width: 100%;
+    }
+    .direct-inner{
+      width: 100%;
+    }
+      .direct-inner .direct-title{
+        width: 100%;
+        margin-right: 0;
+      }
 }

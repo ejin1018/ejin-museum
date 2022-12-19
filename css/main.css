@@ -649,6 +649,7 @@ header,footer,[class*='-container']{
               background: transparent;
             }
           .notice-board-content{
+            height: 380px;
             position: relative;
           }
           .not-board-list{
@@ -667,7 +668,7 @@ header,footer,[class*='-container']{
               .board-link{
                 display: block;
                 float: left;
-                font-size: 17px;
+                font-size: 18px;
                 width: 80%;
                 font-weight: 500;
                 color: #222;
@@ -948,6 +949,7 @@ header,footer,[class*='-container']{
             font-size: 16px;
             font-weight: 400;
             color: #444;
+            word-break: keep-all;
           }
           .policy-btn:hover{
             text-decoration: underline;
