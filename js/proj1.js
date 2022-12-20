@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded',()=>{
-  console.log('ready');
 
   let goTopBtn = document.querySelector('.top-fix');
   goTopBtn.addEventListener('click',()=>{
@@ -8,7 +7,13 @@ window.addEventListener('DOMContentLoaded',()=>{
       left:0,
       behavior: 'smooth'
     });
-  })
+  });
+
+  let popup = document.querySelector('#layer');
+  let popClose = document.querySelector('.layer-close');
+  popClose.addEventListener('click',()=>{
+    popup.style.display = 'none';
+  });
 
   let utilBtns = document.querySelectorAll('.utility-btn');
   let utilArrow = document.querySelectorAll('.arrow-down');
