@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded',()=>{
 
-  let goTopBtn = document.querySelector('.top-fix');
+  var goTopBtn = document.querySelector('.top-fix');
   goTopBtn.addEventListener('click',()=>{
     window.scrollTo({
       top:0,
@@ -9,17 +9,31 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  let popup = document.querySelector('#layer');
-  let popClose = document.querySelector('.layer-close');
+  var popup = document.querySelector('#layer');
+  var popClose = document.querySelector('.layer-close');
   popClose.addEventListener('click',()=>{
     popup.style.display = 'none';
   });
 
-  let utilBtns = document.querySelectorAll('.utility-btn');
-  let utilArrow = document.querySelectorAll('.arrow-down');
-  let utilSubs = document.querySelectorAll('.util-sub-list');
-  let utilMuseum = document.querySelector('.util-museum');
-  let utilLang = document.querySelector('.util-lang');
+  var searchBtn = document.querySelectorAll('.search-btn');
+  var searchClose = document.querySelector('.search-close');
+  var searchLayer = document.querySelector('.search-layer');
+  for(var i=0; i<searchBtn.length; i++){
+    searchBtn[i].addEventListener('click',()=>{
+      searchLayer.style.display = 'block';
+      document.querySelector('body').style.overflowY = 'hidden';
+    });
+  }
+  searchClose.addEventListener('click',()=>{
+    searchLayer.style.display = 'none';
+    document.querySelector('body').style.overflowY = 'scroll';
+  });
+
+  var utilBtns = document.querySelectorAll('.utility-btn');
+  var utilArrow = document.querySelectorAll('.arrow-down');
+  var utilSubs = document.querySelectorAll('.util-sub-list');
+  var utilMuseum = document.querySelector('.util-museum');
+  var utilLang = document.querySelector('.util-lang');
 
   utilBtns.forEach((utilBtn,index)=>{
     utilBtn.addEventListener('mouseenter',()=>{
@@ -66,10 +80,10 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
   
-  let topBtns = document.querySelectorAll('.gnb-top-btn');
-  let midMenu = document.querySelectorAll('.gnb-mid-list');
-  let midBtns = document.querySelectorAll('.gnb-mid-btn');
-  let botMenu = document.querySelectorAll('.gnb-bot-list');
+  var topBtns = document.querySelectorAll('.gnb-top-btn');
+  var midMenu = document.querySelectorAll('.gnb-mid-list');
+  var midBtns = document.querySelectorAll('.gnb-mid-btn');
+  var botMenu = document.querySelectorAll('.gnb-bot-list');
   
   topBtns.forEach((topBtn)=>{
     topBtn.addEventListener('mouseenter',()=>{
@@ -78,7 +92,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       });
 
       if(topBtn.nextElementSibling){
-        let thisMid = topBtn.nextElementSibling.firstElementChild;
+        var thisMid = topBtn.nextElementSibling.firstElementChild;
         thisMid.classList.add('gnb-mid-on');
       }
     });
@@ -94,24 +108,24 @@ window.addEventListener('DOMContentLoaded',()=>{
         botmenu.classList.remove('gnb-bot-on');
       });
       if(midBtn.nextElementSibling){
-        let thisBot = midBtn.nextElementSibling;
+        var thisBot = midBtn.nextElementSibling;
         thisBot.classList.add('gnb-bot-on');
       }
     });
   });
 
   //exhibition slide
-  let ExhUl = document.querySelector('.nationExh-list');
-  let ExhLi = document.querySelectorAll('.nationExh-list li');
-  let nowIndex = 0;
-  let liLength = ExhLi.length;
-  let prev = document.querySelector('.nExh-prev');
-  let next = document.querySelector('.nExh-next');
-  let liWidth = ExhLi[0].clientWidth;
-  let liMargin = 60;
+  var ExhUl = document.querySelector('.nationExh-list');
+  var ExhLi = document.querySelectorAll('.nationExh-list li');
+  var nowIndex = 0;
+  var liLength = ExhLi.length;
+  var prev = document.querySelector('.nExh-prev');
+  var next = document.querySelector('.nExh-next');
+  var liWidth = ExhLi[0].clientWidth;
+  var liMargin = 60;
 
   ExhUl.style.width = (liWidth + liMargin) * liLength + 'px' ;
-  console.log(ExhUl.style.width);
+  // console.log(ExhUl.style.width);
   
   function ExhMove(num){
     ExhUl.style.left = - num * (liWidth + liMargin) + 'px';
@@ -130,9 +144,9 @@ window.addEventListener('DOMContentLoaded',()=>{
   });
 
   // mobile menu
-  let mMenuOpen = document.querySelector('.mobile-open');
-  let mMenuClose = document.querySelector('.mobile-close');
-  let mMenu = document.querySelector('.mobile-wrap');
+  var mMenuOpen = document.querySelector('.mobile-open');
+  var mMenuClose = document.querySelector('.mobile-close');
+  var mMenu = document.querySelector('.mobile-wrap');
 
   mMenuOpen.addEventListener('click',()=>{
     mMenu.style.display = 'block';

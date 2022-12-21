@@ -325,6 +325,11 @@
         font-weight: 400;
         color: #222;
       }
+
+  .go-search{
+    width: 12%;
+  }
+
   /* intro */
   .main-info{
     width: 100%;
@@ -461,6 +466,9 @@
 }
 /* tablet */
 @media screen and (max-width:768px) {
+  .go-search{
+    width: 15%;
+  }
   /* footer */
   .direct-inner{
     width: 48%;
@@ -607,6 +615,21 @@
             margin: 6px 0;
             font-size: 18px;
           }
+  .serach-form{
+    padding: 45px 15px;
+  }
+    .search-form > input[type="text"]{
+      width: 65%;
+      font-size: 16px;
+    }
+    .go-search{
+      width: 20%;
+      font-size: 16px;
+    }
+    .search-close{
+      top: 0;
+      right: 18px;
+    }
   /* intro */
   .info-time{
     margin-bottom: 20px;
