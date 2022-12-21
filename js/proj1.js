@@ -18,12 +18,17 @@ window.addEventListener('DOMContentLoaded',()=>{
   var searchBtn = document.querySelectorAll('.search-btn');
   var searchClose = document.querySelector('.search-close');
   var searchLayer = document.querySelector('.search-layer');
-  for(var i=0; i<searchBtn.length; i++){
-    searchBtn[i].addEventListener('click',()=>{
+  
+  function layerOpen(){
+    if(searchLayer.style.display = 'none'){
       searchLayer.style.display = 'block';
       document.querySelector('body').style.overflowY = 'hidden';
-    });
+    }
   }
+  for(var i=0; i<searchBtn.length; i++){
+    searchBtn[i].addEventListener('click',layerOpen);
+  }
+
   searchClose.addEventListener('click',()=>{
     searchLayer.style.display = 'none';
     document.querySelector('body').style.overflowY = 'scroll';
