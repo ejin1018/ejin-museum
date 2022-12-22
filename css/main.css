@@ -271,7 +271,7 @@ header{
       left: 0;
       display: inline-block;
       width: 100%;
-      background: #222;
+      background: #000;
       z-index: 99;
     }
       .gnb-mid-list{
@@ -295,7 +295,7 @@ header{
           .gnb-mid-list .gnb-mid-btn{
             position: relative;
             display: block;
-            padding: 10px 0;
+            padding: 13px 0;
             color: #fff;
           }
           .gnb-mid-list .gnb-mid-btn:hover{
