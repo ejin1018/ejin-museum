@@ -2,11 +2,16 @@
 
 /* smaller desktop */
 @media screen and (max-width:1200px) {
-  header, footer, [class*='-container']{
+  footer, [class*='-container']{
     width: 97%;
   }
-  .gnb-container, .intro-container{
+  .intro-container{
     width: 100%;
+  }
+  .gnb-container{
+    width: 100%;
+    padding: 0 1.5%;
+    box-sizing: border-box;
   }
   /* header */
   .gnb-inner{
