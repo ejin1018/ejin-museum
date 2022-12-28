@@ -155,11 +155,12 @@
         top: 0;
         left: 0;
         width: 2190px;
+        height: 100%;
         overflow: hidden;
-        transition: left .4s;
       }
         .nationExh-list li{
           width: 315px;
+          height: 100%;
           margin-right: 60px;
           float: left;
         }
@@ -255,7 +256,7 @@
           transform: rotate(45deg);
           background: transparent;
         }
-        .nExh-play{
+        .nExh-stop{
           width: 10px;
           height: 18px;
           border: none;
@@ -263,6 +264,9 @@
           background-color: transparent;
           background-size: contain;
           background-position: center;
+        }
+        .nExh-stop.nExh-play{
+          background: url(../img/play-btn.png) no-repeat;
         }
         .nExh-next{
           width: 15px;

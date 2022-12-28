@@ -129,24 +129,22 @@ window.addEventListener('DOMContentLoaded',()=>{
   var liWidth = ExhLi[0].clientWidth;
   var liMargin = 60;
 
-  ExhUl.style.width = (liWidth + liMargin) * liLength + 'px' ;
-  // console.log(ExhUl.style.width);
-  
-  function ExhMove(num){
-    ExhUl.style.left = - num * (liWidth + liMargin) + 'px';
-    nowIndex = num;
-  }
-  
-  prev.addEventListener('click',()=>{
-    if(nowIndex !== 0){
-      ExhMove(nowIndex - 1);
-    }
-  });
-  next.addEventListener('click',()=>{
-    if(nowIndex !== liLength - 4){
-      ExhMove(nowIndex + 1);
-    }
-  });
+  // ExhUl.style.width = (liWidth + liMargin) * liLength + 'px' ;
+  // function ExhMove(num){
+  //   ExhUl.style.left = - num * (liWidth + liMargin) + 'px';
+  //   nowIndex = num;
+  // }
+  // prev.addEventListener('click',()=>{
+  //   if(nowIndex !== 0){
+  //     ExhMove(nowIndex - 1);
+  //   }
+  // });
+  // next.addEventListener('click',()=>{
+  //   if(nowIndex !== liLength - 4){
+  //     ExhMove(nowIndex + 1);
+  //   }
+  // });
+
 
   // mobile menu
   var mMenuOpen = document.querySelector('.mobile-open');
