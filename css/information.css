@@ -1,0 +1,61 @@
+.subPage-lnb-wrap{
+  width: 100%;
+  margin-top: 80px;
+}
+  .subPage-lnb-container{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+    .sharing-service{
+      overflow: hidden;
+    }
+      .sharing-list{
+        float: right;
+      }
+        .sharing-list li{
+          float: left;
+          margin-left: 35px;
+        }
+          .sharing-btn{
+            display: block;
+          }
+            .sharing-btn img{
+              display: block;
+            }
+    .local-order{
+      width: 100%;
+      display: inline-block;
+    }
+      .local-order-home{
+        width: 15px;
+        height: 15px;
+        margin-top: 5px;
+        background: url(../img/local_home.png) no-repeat;
+        background-size: contain;
+      }
+        .local-order-home::before{
+          display: none;
+        }
+      .local-order-btn{
+        position: relative;
+        display: block;
+        float: left;
+        color: #707070;
+        font-weight: 300;
+        margin-right: 30px;
+      }
+        .local-order-btn::before{
+          content: '';
+          position: absolute;
+          top: 7.5px;
+          left: -18px;
+          width: 6px;
+          height: 24px;
+          background: url(../img/local-arrow.png) no-repeat;
+          background-size:contain;
+        }
+    .subPage-title{
+      margin: 20px 0;
+      color: #222;
+      font-size: 38px;
+    }
