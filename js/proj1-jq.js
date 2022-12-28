@@ -21,7 +21,7 @@ $(function(){
       ul.css('left',-liWidth*6);
     }
     count --;
-    ul.animate({left:-liWidth*count},400);
+    ul.stop().animate({left:-liWidth*count},400);
     console.log(count);
   });
   $('.nExh-next').click(function(){
@@ -30,7 +30,7 @@ $(function(){
       ul.css('left','0')
     }
     count ++ ;
-    ul.animate({left:-liWidth*count},400);
+    ul.stop().animate({left:-liWidth*count},400);
     console.log(count);
   });
 
@@ -40,7 +40,7 @@ $(function(){
       ul.css('left','0')
     }
     count ++ ;
-    ul.animate({left:-liWidth*count},400);
+    ul.stop().animate({left:-liWidth*count},400);
   },2000);
   ExhRotate;
 
