@@ -11,7 +11,6 @@ $(function(){
     ul.css('width',ulWidth);
   }
   ulExtend();
-  console.log(ulWidth);
 
   let count = 0;
 
@@ -47,5 +46,9 @@ $(function(){
   $('.nExh-stop').click(function(){
     clearInterval(ExhRotate);
     $('.nExh-stop').toggleClass('nExh-play');
+    console.log('stop');
+  });
+  $('.nExh-play').click(function(){
+    console.log('play');
   });
 });
