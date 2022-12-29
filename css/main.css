@@ -265,7 +265,7 @@
           background-size: contain;
           background-position: center;
         }
-        .nExh-stop.nExh-play{
+        .nExh-play{
           background: url(../img/play-btn.png) no-repeat;
         }
         .nExh-next{

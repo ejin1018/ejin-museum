@@ -33,22 +33,26 @@ $(function(){
     console.log(count);
   });
 
-  let ExhRotate = setInterval(function(){
+  let ExhRotate = setInterval(ExhAutoPlay,2000);
+
+  function ExhAutoPlay(){
     if(count > 5){
       count = 0;
       ul.css('left','0')
     }
     count ++ ;
     ul.stop().animate({left:-liWidth*count},400);
-  },2000);
-  ExhRotate;
-
+    return false;
+  }
+  
   $('.nExh-stop').click(function(){
-    clearInterval(ExhRotate);
     $('.nExh-stop').toggleClass('nExh-play');
-    console.log('stop');
-  });
-  $('.nExh-play').click(function(){
-    console.log('play');
+    if($('.nExh-stop').hasClass('nExh-play')){
+      clearInterval(ExhRotate);
+      return false;
+    }else{
+      setInterval(ExhAutoPlay,2000);
+      return false;
+    }
   });
 });
