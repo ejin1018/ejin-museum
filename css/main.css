@@ -8,38 +8,91 @@
       width: 100%;
     }
   
-  .main-slider .main-exhibition .main-pagination{
-    width: auto;
-    left: inherit;
-    right: 65px;
+  .main-slider{
+    width: 100%;
+  }
+  .main-exhibition{
+    position: relative;
+    width: 100%;
+    /* overflow: hidden; */
+  }
+    .main-exhibition button{
+      cursor: pointer;
+    }
+  .main-exhibition-inner{
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    transition: all .4s;
+  }
+  .main-exhibition-inner li{
+    float: left;
+  }
+    .main-exhibition-btn{
+      display: block;
+    }
+      .main-exhibition-img{
+        display: block;
+      }
+
+  .main-pagination{
+    position: absolute;
     bottom: 45px;
+    right: 70px;
   }
-  .main-slider .main-exhibition .main-pagination span{
-    width: 18px;
-    height: 18px;
-    margin: 0 8px;
-    background: #fff;
-    border: 1px solid #666;
-    opacity: 1;
-  }
-  .main-slider .main-exhibition .main-pagination span.swiper-pagination-bullet-active{
-    background: #276868;
-  }
-  .main-exhibition .main-next-btn,
-  .main-exhibition .main-prev-btn{
-    color: #222;
-  }
-  .main-stop-btn{
-    width: 35px;
-    height: 35px;
+    .main-pagination span{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin: 0 8px;
+      background: #fff;
+      border: 1px solid #666;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .main-pagination .main-page-on{
+      background: #276868;
+    }
+  .main-ctrl{
     position: absolute;
     right: 20px;
     bottom: 43px;
+    width: 35px;
+    height: 35px;
     z-index: 10;
     border-radius: 0;
     border: 1px solid #666;
+  }  
+  .main-stop-btn{
+    display: block;
     background: url(../img/pause-btn.png) no-repeat;
     background-color: #fff;
+    background-position: center;
+  }
+  .main-play-btn{
+    display: none;
+    background: url(../img/play-btn.png) no-repeat;
+    background-color: #fff;
+    background-position: center;
+  }
+  .main-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 51px;
+    border: 0 none;
+  }
+  .main-next-btn{
+    right: 20px;
+    background: url(../img/main-slide-next.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main-prev-btn{
+    left: 20px;
+    background: url(../img/main-slide-prev.png) no-repeat;
+    background-size: cover;
     background-position: center;
   }
 

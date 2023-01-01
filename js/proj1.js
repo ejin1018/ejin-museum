@@ -124,6 +124,81 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
+  //main slide
+  let mainUl = document.querySelector('.main-exhibition-inner');
+  let mainLi = mainUl.children;
+  let mainLiWidth = mainLi[0].clientWidth;
+  let mainLiLength = mainLi.length;
+  let mainNext = document.querySelector('.main-next-btn');
+  let mainPrev = document.querySelector('.main-prev-btn');
+  let mainStop = document.querySelector('.main-stop-btn');
+  let mainPlay = document.querySelector('.main-play-btn');
+
+  mainUl.style.width = (mainLiWidth * mainLiLength)+'px' ;
+  for(let e=0; e<mainLiLength; e++){
+    mainLi[e].style.width = mainLiWidth+'px';
+  };
+
+  let g = 0;
+  mainPrev.addEventListener('click',()=>{
+    g--;
+    if(g < 0){
+      g = 4;
+    }
+    mainUl.style.left = - (mainLiWidth * g) +'px'
+  })
+  mainNext.addEventListener('click',()=>{
+    g++;
+    if(g > 4){
+      g=0;
+    }
+    mainUl.style.left = - (mainLiWidth * g) +'px'
+  });
+
+  let mainAP;
+  function mainAutoPlay(){
+    mainAP = setInterval(function(){
+      g++;
+      if(g > 4){
+        g=0;
+      }
+      mainUl.style.left = - (mainLiWidth * g) +'px'
+    },2000);
+  }
+  mainAutoPlay();
+
+  mainStop.addEventListener('click',()=>{
+    clearInterval(mainAP);
+    mainStop.style.display = 'none';
+    mainPlay.style.display = 'block';
+  })
+  mainPlay.addEventListener('click',()=>{
+    mainAutoPlay();
+    mainPlay.style.display = 'none';
+    mainStop.style.display = 'block';
+  });
+
+
+  let mainPgn = document.querySelector('.main-pagination');
+  let makePgn
+  for(let f=1; f<mainLiLength; f++){
+    makePgn = document.createElement('span');
+    mainPgn.appendChild(makePgn);
+  }
+  let mainPageBtn = document.querySelectorAll('.main-pagination span');
+  console.log(mainPageBtn);
+  for(let f=0; f<mainLiLength; f++){
+    mainPageBtn[f].addEventListener('click',()=>{
+      mainPageBtn[0].style.background = '#fff';
+      mainPageBtn[1].style.background = '#fff';
+      mainPageBtn[2].style.background = '#fff';
+      mainPageBtn[3].style.background = '#fff';
+      mainPageBtn[4].style.background = '#fff';
+      mainPageBtn[f].style.background = '#276868';
+      mainUl.style.left = - (mainLiWidth * f) +'px'
+    });
+  }
+
   //exhibition slide
   var ExhUl = document.querySelector('.nationExh-list');
   var ExhLi = document.querySelectorAll('.nationExh-list li');
