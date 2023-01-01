@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded',()=>{
 
+  // top btn
   var goTopBtn = document.querySelector('.top-fix');
   goTopBtn.addEventListener('click',()=>{
     window.scrollTo({
@@ -9,12 +10,14 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
+  // copyright notice
   var popup = document.querySelector('#layer');
   var popClose = document.querySelector('.layer-close');
   popClose.addEventListener('click',()=>{
     popup.style.display = 'none';
   });
 
+  // search
   var searchBtn = document.querySelectorAll('.search-btn');
   var searchClose = document.querySelector('.search-close');
   var searchLayer = document.querySelector('.search-layer');
@@ -34,6 +37,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('body').style.overflowY = 'scroll';
   });
 
+  // utility menu
   var utilBtns = document.querySelectorAll('.utility-btn');
   var utilArrow = document.querySelectorAll('.arrow-down');
   var utilSubs = document.querySelectorAll('.util-sub-list');
@@ -85,6 +89,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     });
   });
   
+  // main menu
   var topBtns = document.querySelectorAll('.gnb-top-btn');
   var midMenu = document.querySelectorAll('.gnb-mid-list');
   var midBtns = document.querySelectorAll('.gnb-mid-btn');
@@ -145,6 +150,53 @@ window.addEventListener('DOMContentLoaded',()=>{
   //   }
   // });
 
+  // notice top right slide
+  let serviceUl = document.querySelector('.service-slide');
+  let serviceLi = serviceUl.children;
+  let serviceLiLength = document.querySelectorAll('.service-slide li').length;
+  let serviceLiWidth = document.querySelector('.service-slide li').clientWidth;
+  let serviceStop = document.querySelector('.service-slide-stop');
+  let servicePlay = document.querySelector('.service-slide-play');
+
+  serviceUl.style.width = serviceLiWidth*serviceLiLength+'px';
+  for(let a=0; a<serviceLiLength; a++){
+    serviceLi[a].style.width = serviceLiWidth+'px';
+  }
+  
+  let servicePgn = document.querySelectorAll('.service-slide-pgn');
+  for(let b=0; b<serviceLiLength; b++){
+    servicePgn[b].addEventListener('click',()=>{
+      servicePgn[0].style.backgroundColor='#fff';
+      servicePgn[2].style.backgroundColor='#fff';
+      servicePgn[1].style.backgroundColor='#fff';
+      serviceUl.style.left = -(serviceLiWidth * b) + 'px'
+      servicePgn[b].style.backgroundColor='#276868'
+    })
+  };
+  
+  let c=0;
+  let serviceAP;
+  function serviceAutoPlay(){
+    serviceAP = setInterval(()=>{
+      if(c >= serviceLiLength){
+        c=0;
+      }
+      serviceUl.style.left = -(serviceLiWidth * c) + 'px'
+      c++;
+    },1500);
+  }
+  serviceAutoPlay();
+
+  serviceStop.addEventListener('click',()=>{
+    clearInterval(serviceAP);
+    serviceStop.style.display = 'none';
+    servicePlay.style.display = 'block';
+  });
+  servicePlay.addEventListener('click',()=>{
+    serviceAutoPlay();
+    servicePlay.style.display = 'none';
+    serviceStop.style.display = 'block';
+  });
 
   // mobile menu
   var mMenuOpen = document.querySelector('.mobile-open');

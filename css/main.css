@@ -386,9 +386,10 @@
         overflow: hidden;
       }
         .service-slide{
-          width: 2040px;
           position: relative;
+          left: 0;
           overflow: hidden;
+          transition: left .4s;
         }
           .service-slide li{
             float: left;
@@ -428,6 +429,14 @@
             height: 30px;
             border: 1px solid #666;
             background: url(../img/pause-btn.png) center no-repeat;
+            background-color: #fff;
+          }
+          .service-slide-play{
+            display: none;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #666;
+            background: url(../img/play-btn.png) center no-repeat;
             background-color: #fff;
           }
 
