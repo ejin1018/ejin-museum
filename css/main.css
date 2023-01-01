@@ -257,6 +257,7 @@
           background: transparent;
         }
         .nExh-stop{
+          display: block;
           width: 10px;
           height: 18px;
           border: none;
@@ -266,7 +267,14 @@
           background-position: center;
         }
         .nExh-play{
+          display: none;
+          width: 10px;
+          height: 18px;
+          border: none;
           background: url(../img/play-btn.png) no-repeat;
+          background-color: transparent;
+          background-size: contain;
+          background-position: center;
         }
         .nExh-next{
           width: 15px;

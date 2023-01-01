@@ -33,26 +33,28 @@ $(function(){
     console.log(count);
   });
 
-  let ExhRotate = setInterval(ExhAutoPlay,2000);
-
+  let ExhRotate;
   function ExhAutoPlay(){
-    if(count > 5){
-      count = 0;
-      ul.css('left','0')
-    }
-    count ++ ;
-    ul.stop().animate({left:-liWidth*count},400);
-    return false;
+    ExhRotate = setInterval(()=>{
+      if(count > 5){
+        count = 0;
+        ul.css('left','0')
+      }
+      count ++ ;
+      ul.stop().animate({left:-liWidth*count},400);
+      return false;
+    },2000)
   }
+  ExhAutoPlay();
   
   $('.nExh-stop').click(function(){
-    $('.nExh-stop').toggleClass('nExh-play');
-    if($('.nExh-stop').hasClass('nExh-play')){
-      clearInterval(ExhRotate);
-      return false;
-    }else{
-      setInterval(ExhAutoPlay,2000);
-      return false;
-    }
+    clearInterval(ExhRotate);
+    $('.nExh-stop').css('display','none');
+    $('.nExh-play').css('display','block');
   });
+  $('.nExh-play').click(function(){
+    ExhAutoPlay();
+    $('.nExh-play').css('display','none');
+    $('.nExh-stop').css('display','block');
+  })
 });
