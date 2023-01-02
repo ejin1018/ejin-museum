@@ -14,18 +14,20 @@
   .main-exhibition{
     position: relative;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
     .main-exhibition button{
       cursor: pointer;
     }
   .main-exhibition-inner{
+    width: 500%;
     position: relative;
     left: 0;
     overflow: hidden;
     transition: all .4s;
   }
   .main-exhibition-inner li{
+    width: 20%;
     float: left;
   }
     .main-exhibition-btn{
