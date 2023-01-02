@@ -407,6 +407,7 @@
             position: relative;
           }
           .not-board-list{
+            display: none;
             list-style: disc;
             width: 100%;
             position: absolute;

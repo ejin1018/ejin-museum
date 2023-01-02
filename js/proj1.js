@@ -186,7 +186,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     mainPgn.appendChild(makePgn);
   }
   let mainPageBtn = document.querySelectorAll('.main-pagination span');
-  console.log(mainPageBtn);
   for(let f=0; f<mainLiLength; f++){
     mainPageBtn[f].addEventListener('click',()=>{
       mainPageBtn[0].style.background = '#fff';
@@ -224,6 +223,22 @@ window.addEventListener('DOMContentLoaded',()=>{
   //     ExhMove(nowIndex + 1);
   //   }
   // });
+
+
+  // notice top left tab menu
+  var noticeTab = document.querySelectorAll('.not-tab-radio label');
+  var noticeBoard = document.querySelectorAll('.not-board-list');
+  for(let h=0; h<noticeTab.length; h++){ //0 1 2 3
+    noticeBoard[0].style.display = 'block';
+    noticeTab[h].addEventListener('click',()=>{
+      for(let i=0; i<noticeTab.length; i++){
+        noticeBoard[i].style.display = 'none';
+        if(h == i){
+          noticeBoard[i].style.display = 'block';
+        }
+      }
+    });
+  }
 
   // notice top right slide
   let serviceUl = document.querySelector('.service-slide');
