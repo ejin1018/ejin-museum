@@ -228,7 +228,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   // notice top left tab menu
   var noticeTab = document.querySelectorAll('.not-tab-radio label');
   var noticeBoard = document.querySelectorAll('.not-board-list');
-  for(let h=0; h<noticeTab.length; h++){ //0 1 2 3
+  for(let h=0; h<noticeTab.length; h++){
     noticeBoard[0].style.display = 'block';
     noticeTab[h].addEventListener('click',()=>{
       for(let i=0; i<noticeTab.length; i++){
@@ -256,9 +256,9 @@ window.addEventListener('DOMContentLoaded',()=>{
   let servicePgn = document.querySelectorAll('.service-slide-pgn');
   for(let b=0; b<serviceLiLength; b++){
     servicePgn[b].addEventListener('click',()=>{
-      servicePgn[0].style.backgroundColor='#fff';
-      servicePgn[2].style.backgroundColor='#fff';
-      servicePgn[1].style.backgroundColor='#fff';
+      for(let j=0; j<serviceLiLength; j++){
+        servicePgn[j].style.backgroundColor='#fff';
+      }
       serviceUl.style.left = -(serviceLiWidth * b) + 'px'
       servicePgn[b].style.backgroundColor='#276868'
     })
@@ -272,6 +272,15 @@ window.addEventListener('DOMContentLoaded',()=>{
         c=0;
       }
       serviceUl.style.left = -(serviceLiWidth * c) + 'px'
+
+      for(var k=0; k<serviceLiLength; k++){
+        if(c == k){
+          servicePgn[k].style.backgroundColor='#276868'
+        }else{
+          servicePgn[k].style.backgroundColor='#fff'
+        }
+      }
+
       c++;
     },1500);
   }
