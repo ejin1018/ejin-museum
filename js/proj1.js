@@ -317,6 +317,29 @@ window.addEventListener('DOMContentLoaded',()=>{
     serviceStop.style.display = 'block';
   });
 
+  //notice musical slide
+  var musicalNext = document.querySelector('.not-bot-event .notbot-next');
+  var musicalPrev = document.querySelector('.not-bot-event .notbot-prev')
+  let musicalUl = document.querySelector('.musical-slide');
+  var musicalLi =  document.querySelectorAll('.musical-slide li');
+  var musicalLiWidth = document.querySelector('.musical-slide li').clientWidth;
+  var musicalLiLength = musicalLi.length;
+  var musicalTotal = document.querySelector('.slide-total');
+
+  musicalTotal.innerText=musicalLiLength;
+
+  var musicalIndex = 0;
+  musicalNext.addEventListener('click',()=>{
+    musicalUl.style.left = -musicalLiWidth + 'px';
+  });
+  musicalPrev.addEventListener('click',()=>{
+    musicalUl.style.left = musicalLiWidth * musicalIndex + 'px';
+  });
+
+  //notice online exhibit
+  
+
+
   // mobile menu
   var mMenuOpen = document.querySelector('.mobile-open');
   var mMenuClose = document.querySelector('.mobile-close');

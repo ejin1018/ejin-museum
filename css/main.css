@@ -16,9 +16,6 @@
     width: 100%;
     overflow: hidden;
   }
-    .main-exhibition button{
-      cursor: pointer;
-    }
   .main-exhibition-inner{
     width: 500%;
     position: relative;
@@ -299,7 +296,6 @@
       }
         .nationExh-control button{
           padding: 0;
-          cursor: pointer;
         }
         .nExh-prev{
           width: 15px;
@@ -516,6 +512,7 @@
         float: left;
       }
       .not-bot-title{
+        display: inline-block;
         margin-bottom: 35px;
         font-size: 30px;
       }
@@ -559,12 +556,17 @@
         }
         .musical-slide{
           position: relative;
-          width: 576px;
+          width: 200%;
+          left: 0;
+          transition: left .4s;
           overflow: hidden;
         }
           .musical-slide li{
             width: 50%;
             float: left;
+          }
+          .musical-slide li img{
+            width: 100%;
           }
             .musical-date{
               margin-top: 20px;
@@ -575,15 +577,52 @@
       .not-bot-online{
         width: 45%;
       }
+          .notbot-exhibit-title > .not-tab-plus{
+            float: none;
+            margin-left: 10px;
+            margin-top: 0;
+          }
+          .notbot-slide-control{
+            height: 44px;
+            line-height: 44px;
+            float: right;
+            overflow: hidden;
+          }
+            .notbot-slide-control button{
+              float: left;
+              width: 20px;
+              height: 20px;
+              margin-top: 12px;
+              border: 0 none;
+              padding: 0;
+              background: transparent;
+            }
+            .notbot-slide-control .notbot-prev{
+              margin-right: 5px;
+              background: url(../img/main-slide-prev.png) no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+            .notbot-slide-control .notbot-next{
+              margin-left: 5px;
+              background: url(../img/main-slide-next.png) no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+            .slide-now, .slide-total{
+              float: left;
+              color: #666;
+            }
         .online-exhibit-slide{
           width: 100%;
           overflow: hidden;
         }
           .online-exhibit-list{
-            width: 4739px;
+            width: 700%;
             overflow: hidden;
           }
             .online-exhibit-list li{
+              width: 14.285%;
               float: left;
             }
             .online-exhibit-btn{
