@@ -146,6 +146,13 @@ window.addEventListener('DOMContentLoaded',()=>{
       g = 4;
     }
     mainUl.style.left = - (mainLiWidth * g) +'px'
+    for(let m=0; m<mainPageBtn.length; m++){
+      if(g==m){
+        mainPageBtn[m].style.background = '#276868';
+      }else{
+        mainPageBtn[m].style.background = '#fff';
+      }
+    }
   })
   mainNext.addEventListener('click',()=>{
     g++;
@@ -153,6 +160,13 @@ window.addEventListener('DOMContentLoaded',()=>{
       g=0;
     }
     mainUl.style.left = - (mainLiWidth * g) +'px'
+    for(let m=0; m<mainPageBtn.length; m++){
+      if(g==m){
+        mainPageBtn[m].style.background = '#276868';
+      }else{
+        mainPageBtn[m].style.background = '#fff';
+      }
+    }
   });
 
   let mainAP;
@@ -163,6 +177,14 @@ window.addEventListener('DOMContentLoaded',()=>{
         g=0;
       }
       mainUl.style.left = - (mainLiWidth * g) +'px'
+
+      for(let m=0; m<mainPageBtn.length; m++){
+        if(g==m){
+          mainPageBtn[m].style.background = '#276868';
+        }else{
+          mainPageBtn[m].style.background = '#fff';
+        }
+      }
     },2000);
   }
   mainAutoPlay();
@@ -188,11 +210,9 @@ window.addEventListener('DOMContentLoaded',()=>{
   let mainPageBtn = document.querySelectorAll('.main-pagination span');
   for(let f=0; f<mainLiLength; f++){
     mainPageBtn[f].addEventListener('click',()=>{
-      mainPageBtn[0].style.background = '#fff';
-      mainPageBtn[1].style.background = '#fff';
-      mainPageBtn[2].style.background = '#fff';
-      mainPageBtn[3].style.background = '#fff';
-      mainPageBtn[4].style.background = '#fff';
+      for(let l=0; l<mainPageBtn.length; l++){
+        mainPageBtn[l].style.background = '#fff';
+      }
       mainPageBtn[f].style.background = '#276868';
       mainUl.style.left = - (mainLiWidth * f) +'px'
     });
