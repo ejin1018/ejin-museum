@@ -449,12 +449,14 @@
         overflow: hidden;
       }
         .service-slide{
+          width: 300%;
           position: relative;
           left: 0;
           overflow: hidden;
           transition: left .4s;
         }
           .service-slide li{
+            width: 33.333%;
             float: left;
           }
             .service-slide-btn{
