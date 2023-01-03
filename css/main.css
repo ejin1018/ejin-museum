@@ -613,13 +613,20 @@
               float: left;
               color: #666;
             }
+            .slide-slash{
+              float: left;
+              display: block;
+            }
         .online-exhibit-slide{
           width: 100%;
           overflow: hidden;
         }
           .online-exhibit-list{
+            position: relative;
+            left: 0;
             width: 700%;
             overflow: hidden;
+            transition: left .4s;
           }
             .online-exhibit-list li{
               width: 14.285%;

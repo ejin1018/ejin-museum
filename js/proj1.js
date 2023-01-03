@@ -324,20 +324,68 @@ window.addEventListener('DOMContentLoaded',()=>{
   var musicalLi =  document.querySelectorAll('.musical-slide li');
   var musicalLiWidth = document.querySelector('.musical-slide li').clientWidth;
   var musicalLiLength = musicalLi.length;
-  var musicalTotal = document.querySelector('.slide-total');
+  var musicalNow = document.querySelector('.not-bot-event .slide-now');
+  var musicalTotal = document.querySelector('.not-bot-event .slide-total');
+  let p = 1;
 
   musicalTotal.innerText=musicalLiLength;
 
   var musicalIndex = 0;
   musicalNext.addEventListener('click',()=>{
     musicalUl.style.left = -musicalLiWidth + 'px';
+    p++
+    if(p>=musicalLiLength){
+      p = musicalLiLength;
+    }
+    musicalNow.innerHTML = p;
   });
   musicalPrev.addEventListener('click',()=>{
     musicalUl.style.left = musicalLiWidth * musicalIndex + 'px';
+    p--
+    if(p<=1){
+      p=1;
+    }
+    musicalNow.innerHTML = p;
   });
 
   //notice online exhibit
-  
+  var onlineUl = document.querySelector('.online-exhibit-list');
+  var onlineLi = document.querySelectorAll('.online-exhibit-list li');
+  var onlineLiWidth = document.querySelector('.online-exhibit-list li').clientWidth;
+  var onlineLiLength = onlineLi.length; //7
+  var onlineNow = document.querySelector('.not-bot-online .slide-now');
+  var onlineTotal = document.querySelector('.not-bot-online .slide-total');
+  var onlinePrev = document.querySelector('.not-bot-online .notbot-prev');
+  var onlineNext = document.querySelector('.not-bot-online .notbot-next');
+  var o = 0;
+  var q = 1;
+
+  onlineTotal.innerHTML=onlineLiLength;
+
+  onlineNext.addEventListener('click',()=>{
+    o++;
+    if(o>=onlineLiLength){
+      o = 0;
+    }
+    onlineUl.style.left = -(onlineLiWidth * o) + 'px' ;
+    q++;
+    if(q>onlineLiLength){
+      q = 1;
+    }
+    onlineNow.innerHTML = q;
+  });
+  onlinePrev.addEventListener('click',()=>{
+    if(o<=0){
+      o = 7;
+    }
+    o--;
+    onlineUl.style.left = -(onlineLiWidth * o) + 'px' ;
+    q--;
+    if(q<1){
+      q = onlineLiLength;
+    }
+    onlineNow.innerHTML = q;
+  });
 
 
   // mobile menu
