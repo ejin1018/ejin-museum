@@ -43,6 +43,13 @@
   .mus-btn-area{
     width: 25%;
   }
+  /* intro - main slide */
+  .main-pc-img, .main-arrow{
+    display: none;
+  }
+  .main-mo-img{
+    display: block;
+  }
   /* notice */
   .not-tab-radio label{
     font-size: 21px;
@@ -144,14 +151,6 @@
       }
   .mobile-wrap{
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    z-index: 999;
-    background: #fff;
   }
   .mobile-header-open{
     width: 90%;
@@ -315,11 +314,6 @@
         transform: rotate(-45deg);
         transition: all .4s;
       }
-    .mobile-menu-btn:hover ~ .mobile-mid-inner,
-    .mobile-menu-btn:active ~ .mobile-mid-inner,
-    .mobile-menu-btn:focus ~ .mobile-mid-inner{
-      display: block;
-    }
     .mobile-mid-inner{
       display: none;
     }
