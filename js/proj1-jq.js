@@ -21,7 +21,9 @@ $(function(){
     }
     count --;
     ul.stop().animate({left:-liWidth*count},400);
-    console.log(count);
+    clearInterval(ExhRotate);
+    $('.nExh-stop').css('display','none');
+    $('.nExh-play').css('display','block');
   });
   $('.nExh-next').click(function(){
     if(count > 5){
@@ -30,7 +32,9 @@ $(function(){
     }
     count ++ ;
     ul.stop().animate({left:-liWidth*count},400);
-    console.log(count);
+    clearInterval(ExhRotate);
+    $('.nExh-stop').css('display','none');
+    $('.nExh-play').css('display','block');
   });
 
   let ExhRotate;

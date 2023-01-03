@@ -153,6 +153,9 @@ window.addEventListener('DOMContentLoaded',()=>{
         mainPageBtn[m].style.background = '#fff';
       }
     }
+    clearInterval(mainAP);
+    mainStop.style.display = 'none';
+    mainPlay.style.display = 'block';
   })
   mainNext.addEventListener('click',()=>{
     g++;
@@ -167,6 +170,9 @@ window.addEventListener('DOMContentLoaded',()=>{
         mainPageBtn[m].style.background = '#fff';
       }
     }
+    clearInterval(mainAP);
+    mainStop.style.display = 'none';
+    mainPlay.style.display = 'block';
   });
 
   let mainAP;

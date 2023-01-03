@@ -294,6 +294,7 @@ header{
           margin-right: 15px;
         }
           .gnb-mid-list .gnb-mid-btn{
+            font-size: 17px;
             position: relative;
             display: block;
             padding: 13px 0;
@@ -326,11 +327,11 @@ header{
       display: block;
     }
       .gnb-bot-list > li{
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
         .gnb-bot-list .gnb-bot-btn{
           position: relative;
-          font-size: 14px;
+          font-size: 15px;
           color: #fff;
           white-space: nowrap;
         }
