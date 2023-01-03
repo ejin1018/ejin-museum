@@ -393,6 +393,42 @@ window.addEventListener('DOMContentLoaded',()=>{
     onlineNow.innerHTML = q;
   });
 
+  //footer
+  var directOpen = document.querySelectorAll('.direct-list-open');
+  var directArrow = document.querySelectorAll('.direct-open-arrow');
+  var directList = document.querySelectorAll('.direct-list');
+  var directWrap = document.querySelectorAll('.direct-title');
+
+  // console.log(directList[0].children.length); //3
+  // console.log(directList[1].children.length); //13
+  // console.log(directList[2].children.length); //12
+
+  //마우스 올리면 리스트 높이에 맞춰 올리기 
+  for(let s=0; s<directList.length; s++){
+    directWrap[s].addEventListener('mouseenter',()=>{
+      directList[s].style.visibility = 'visible';
+      directList[s].style.height = 100 * directList[s].children.length + '%';
+      directOpen[s].style.color = '#fff';
+      directOpen[s].style.background = '#222';
+      directArrow[s].style.transform = 'rotate(-135deg)';
+      directArrow[s].style.borderBottom = '2px solid #fff';
+      directArrow[s].style.borderRight = '2px solid #fff';
+      directArrow[s].style.marginTop = '7px';
+    });
+    directWrap[s].addEventListener('mouseleave',()=>{
+      directList[s].style.height = 0+'%';
+      directOpen[s].style.color = '#222';
+      directOpen[s].style.background = '#fff';
+      directArrow[s].style.transform = 'rotate(45deg)';
+      directArrow[s].style.borderBottom = '2px solid #222';
+      directArrow[s].style.borderRight = '2px solid #222';
+    });
+    directList[s].addEventListener('mouseenter',()=>{
+      directOpen[s].style.color = '#fff';
+      directOpen[s].style.background = '#222';
+    });
+  }
+  
 
   // mobile menu
   var mMenuOpen = document.querySelector('.mobile-open');

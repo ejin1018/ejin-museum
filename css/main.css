@@ -719,23 +719,34 @@
         position: relative;
         margin-bottom: 30px;
       }
-        .direct-title > input[type="checkbox"]{
-          display: none;
-        }
-        .direct-title > label {
+        .direct-list-open{
           position: relative;
           display: block;
-          padding: 8px 45px 8px 8px;
+          padding: 8px;
           border-bottom: 2px solid #222;
+          color: #222;
           font-weight: 400;
           cursor: pointer;
           word-break: keep-all;
+          background: #fff;
         }
-        .direct-title > input[type="checkbox"]:checked + label{
+        .direct-list-open:focus{
           color: #fff;
           background: #222;
         }
-        .direct-title > label:after{
+        .direct-open-arrow{
+          display: block;
+          float: right;
+          width: 13px;
+          height: 13px;
+          margin-top: 4px;
+          border-bottom: 2px solid #222;
+          border-right: 2px solid #222;
+          transform: rotate(45deg);
+          transform-origin: center;
+          transition: all .5s;
+        }
+        /* .direct-list-open::after{
           content: '';
           position: absolute;
           top: 10px;
@@ -745,31 +756,35 @@
           border-bottom: 2px solid #222;
           border-right: 2px solid #222;
           transform: rotate(45deg);
-          transition: all .4s;
-        }
-        .direct-title > input[type="checkbox"]:checked + label:after{
+          transition: all .3s;
+        } */
+        /* .direct-list-open:hover::after{
           top: 18px;
           transform: rotate(-135deg);
           border-bottom: 2px solid #fff;
           border-right: 2px solid #fff;
-        }
+        } */
+        /* .direct-list-open:focus::after{
+          top: 18px;
+          transform: rotate(-135deg);
+          border-bottom: 2px solid #fff;
+          border-right: 2px solid #fff;
+        } */
         .direct-list{
-          display: none;
+          visibility: hidden;
           position: absolute;
-          top: 100%;
+          bottom: 100%;
           left: 0;
           width: 100%;
+          height: 0%;
           background: #222;
           transition: all .4s;
-        }
-        .direct-title > input[type="checkbox"]:checked ~ .direct-list{
-          display: block;
-          top: auto;
-          bottom: 100%;
+          overflow: hidden;
+          z-index: 99;
         }
         .direct-btn{
           display: block;
-          padding: 8px 5px;
+          padding: 11px 5px;
           font-size: 14px;
           font-weight: 300;
           color: #fff;
