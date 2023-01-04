@@ -164,10 +164,10 @@ header{
       background: #222;
       color: #fff;
     }
-    /* .utility-btn-on{
+    .utility-btn-on{
       background: #222;
       color: #fff;
-    } */
+    }
       .arrow-down{
         display: inline-block;
         width: 8px;
@@ -182,12 +182,12 @@ header{
         border-bottom: solid 1px #fff;
         border-left: solid 1px #fff;
       }
-      /* .utility-btn-on .arrow-down{
+      .utility-btn-on .arrow-down{
         margin: 0 0  -1px 10px;
         border-bottom: solid 1px #fff;
         border-left: solid 1px #fff;
         transform: rotate(135deg);
-      } */
+      }
     .util-sub-list{
       display: none;
       position: absolute;
@@ -293,17 +293,30 @@ header{
           float: left;
           margin-right: 15px;
         }
-          .gnb-mid-list .gnb-mid-btn{
+          .gnb-mid-btn{
             font-size: 17px;
             position: relative;
             display: block;
             padding: 13px 0;
             color: #fff;
           }
-          .gnb-mid-list .gnb-mid-btn:hover{
+          .gnb-mid-btn:hover{
             color: #FADA4E;
           }
-          .gnb-mid-list .gnb-mid-btn:hover::before{
+          .gnb-mid-btn:hover::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -8.5px;
+            width: 17px;
+            height: 5px;
+            background: #FADA4E;
+          }
+          .gnb-mid-btn-on{
+            color: #FADA4E;
+          }
+          .gnb-mid-btn-on::before{
             content: '';
             position: absolute;
             bottom: 0;
@@ -353,10 +366,16 @@ header{
       font-weight: 400;
       color: #222;
     }
-      .search-btn img{
+      .search-btn img,
+      .search-close img{
         display: block;
         width: 100%;
       }
+    .sign-inner > .search-close{
+      display: none;
+      width: 25px;
+      height: 25px;
+    }
 
 /* mobile-menu */
 .mobile-wrap{
@@ -382,6 +401,9 @@ header{
   margin-top: 25px;
   background: rgba(255,255,255,0.7);
   z-index: 99;
+}
+.search-layer-on{
+  display: block;
 }
   .search-form{
     padding: 45px 35px;
@@ -411,7 +433,7 @@ header{
       background: #276868;
       border: 0 none;
     }
-  .search-close{
+  /* .search-close{
     position: absolute;
     top: 10px;
     right: 35px;
@@ -420,4 +442,4 @@ header{
   }
     .search-close img{
       width: 100%;
-    }
+    } */
