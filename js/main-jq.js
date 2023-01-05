@@ -72,6 +72,96 @@ $(function(){
     $(this).stop().hide();
   })
 
+  // main slide
+  var mainUl = $('.main-exhibition-inner');
+  var mainLi = $('.main-exhibition-inner li');
+  var mainLiWidth = mainLi.width();
+  var mainLiLength = mainLi.length; //5
+  var mainClone = mainLi.clone();
+  var mainNext = $('.main-next-btn');
+  var mainPrev = $('.main-prev-btn');
+  var mainStop = $('.main-stop-btn');
+  var mainPlay = $('.main-play-btn');
+  var mainPgn = $('.main-pagination');
+  var pgnClone
+  var mainC = 0;
+  var pageC = 0;
+  let mainAP;
+
+  mainUl.append(mainClone);
+  mainUl.css('width',mainUl.width()*2);
+  for(let makePgn=1; makePgn<mainLiLength; makePgn++){
+    pgnClone = document.createElement('span');
+    mainPgn.append(pgnClone);
+  }
+  
+  var mainPgnBtn = mainPgn.children('span');
+  
+  function mainAutoPlay(){
+    mainAP = setInterval(function(){
+      if(mainC >= mainLiLength){
+        mainC = 0;
+        mainUl.css('left','0');
+      }
+      mainC ++ ;
+      mainUl.stop().animate({'left':-(mainLiWidth*mainC)*2},400);
+
+      mainPgnBtn.css('background','#fff');
+      mainPgnBtn.eq(mainC).css('background','#276868');
+    },3000);  
+  } 
+  mainAutoPlay();
+  
+  mainPrev.click(function(){
+    mainAutoStop();
+    if(mainC <= 0){
+      mainC = mainLiLength;
+      mainUl.css('left',-(mainLiWidth*mainLiLength)*2);
+    }
+    mainC -- ;
+    mainUl.stop().animate({'left':-(mainLiWidth*mainC)*2},400);
+    mainPgnBtn.css('background','#fff');
+    mainPgnBtn.eq(mainC).css('background','#276868');
+  });
+  mainNext.click(function(){
+    mainAutoStop();
+    if(mainC >= mainLiLength){
+      mainC = 0; 
+      mainUl.css('left','0');
+    }
+    mainC ++ ;
+    mainUl.stop().animate({'left':-(mainLiWidth*mainC)*2},400);
+
+    pageC++;
+    if(pageC >= mainLiLength){
+      pageC = 0;
+    }
+    mainPgnBtn.css('background','#fff');
+    mainPgnBtn.eq(pageC).css('background','#276868');
+  });
+  
+  function mainAutoStop(){
+    clearInterval(mainAP);
+    mainStop.css('display','none');
+    mainPlay.css('display','block');
+  }
+  mainStop.click(function(){
+    mainAutoStop();
+  });
+  mainPlay.click(function(){
+    mainAutoPlay();
+    mainPlay.css('display','none');
+    mainStop.css('display','block');
+  });
+
+  mainPgnBtn.click(function(){
+    mainAutoStop();
+    mainPgnBtn.css('background','#fff');
+    $(this).css('background','#276868');
+    var pgnC = $(this).index();
+    mainUl.stop().animate({'left':-(mainLiWidth*pgnC)*2},400);
+  });
+  
   // nation Exhibition
   let ul = $('.nationExh-list');
   let liWidth = $('.nationExh-list').find('li').outerWidth(true);
