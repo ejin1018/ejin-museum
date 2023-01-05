@@ -113,7 +113,7 @@ $(function(){
 
   let ExhRotate;
   function ExhAutoPlay(){
-    ExhRotate = setInterval(()=>{
+    ExhRotate = setInterval(function(){
       if(count > 5){
         count = 0;
         ul.css('left','0')
