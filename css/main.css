@@ -560,7 +560,6 @@
           position: relative;
           width: 200%;
           left: 0;
-          transition: left .4s;
           overflow: hidden;
         }
           .musical-slide li{
