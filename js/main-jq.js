@@ -106,8 +106,14 @@ $(function(){
       mainC ++ ;
       mainUl.stop().animate({'left':-(mainLiWidth*mainC)*2},400);
 
+      pageC++;
+      if(pageC >= mainLiLength){
+        pageC = 0;
+      }
       mainPgnBtn.css('background','#fff');
-      mainPgnBtn.eq(mainC).css('background','#276868');
+      mainPgnBtn.eq(pageC).css('background','#276868');
+
+      console.log('mainIndex '+mainC)
     },3000);  
   } 
   mainAutoPlay();
@@ -138,6 +144,8 @@ $(function(){
     }
     mainPgnBtn.css('background','#fff');
     mainPgnBtn.eq(pageC).css('background','#276868');
+
+    console.log('mainIndex '+mainC)
   });
   
   function mainAutoStop(){
@@ -159,6 +167,7 @@ $(function(){
     mainPgnBtn.css('background','#fff');
     $(this).css('background','#276868');
     var pgnC = $(this).index();
+    console.log('paginationIndex'+pgnC);
     mainUl.stop().animate({'left':-(mainLiWidth*pgnC)*2},400);
   });
   
