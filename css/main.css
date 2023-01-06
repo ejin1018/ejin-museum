@@ -284,7 +284,7 @@
           .nation-period{
             margin-top: 15px;
             font-weight: 300;
-            color: #8e8e8e;
+            color: #666;
           }
 
       .nationExh-control{
@@ -364,7 +364,7 @@
           .notice-board-title{
             width: 100%;
             display: inline-block;
-            border-bottom: 1px solid #8e8e8e;
+            border-bottom: 1px solid #666;
           }
             .not-tab-btns{
               width: 80%;
@@ -379,7 +379,7 @@
                 font-size: 24px;
                 text-align: center;
                 cursor: pointer;
-                color: #8e8e8e;
+                color: #666;
               }
               .not-tab-btn-on{
                 color: #222;
@@ -434,7 +434,7 @@
                   width: 20%;
                   font-size: 18px;
                   font-weight: 300;
-                  color: #8e8e8e;
+                  color: #666;
                   text-align: right;
                 }
 
@@ -444,12 +444,14 @@
         width: 47%;
         overflow: hidden;
       }
+      .not-service{
+        width: 100%;
+      }
         .service-slide{
           width: 300%;
           position: relative;
           left: 0;
           overflow: hidden;
-          transition: left .4s;
         }
           .service-slide li{
             width: 33.333%;
@@ -457,6 +459,7 @@
           }
             .service-slide-btn{
               display: block;
+              width: 100%;
             }
               .service-slide-btn img{
                 width: 100%;
@@ -668,7 +671,7 @@
         }
           .sitemap-mid-btn{
             display: inline-block;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 300;
             color: #666;
             letter-spacing: -0.25px;
@@ -760,7 +763,7 @@
         .direct-btn{
           display: block;
           padding: 11px 5px;
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 300;
           color: #fff;
           text-align: center;
@@ -810,7 +813,7 @@
           .alright-info p, .alright-info a{
             display: block;
             margin-bottom: 10px;
-            font-size: 15px;
+            font-size: 16px;
             color: #444;
             text-align: right;
           }

@@ -113,7 +113,6 @@ $(function(){
       mainPgnBtn.css('background','#fff');
       mainPgnBtn.eq(pageC).css('background','#276868');
 
-      console.log('mainIndex '+mainC)
     },3000);  
   } 
   mainAutoPlay();
@@ -242,8 +241,65 @@ $(function(){
   noticeTab.click(function(){
     noticeTab.removeClass('not-tab-btn-on');
     $(this).addClass('not-tab-btn-on');
+
     noticeBoard.css('display','none');
     var noticeTIndex = $(this).index();
     noticeBoard.eq(noticeTIndex).css('display','block');
+  });
+
+  // notice top right slide
+  var serviceUl = $('.service-slide')
+  var serviceLi = $('.service-slide li');
+  var serviceLiClone = serviceLi.clone();
+  var serviceLiWidth = serviceLi.width();
+  var serviceStop = $('.service-slide-stop');
+  var servicePlay = $('.service-slide-play');
+  var servicePgn = $('.service-slide-pgns');
+  var servicePgnBtn = $('.service-slide-pgn');
+  var serviceAP;
+  var servC = 0;
+  var servPageC = 0;
+  
+  $('.service-slide').append(serviceLiClone);
+  $('.service-slide').css('width',serviceLiWidth*$('.service-slide li').length);
+  $('.service-slide li').css('width',100/$('.service-slide li').length+'%');
+
+  function serviceAutoPlay(){
+    serviceAP = setInterval(function(){
+      if(servC >= $('.service-slide li').length/2){
+        servC = 0;
+        serviceUl.css('left','0');
+      }
+      servC ++;
+      serviceUl.animate({left:-serviceLiWidth*servC},400);
+
+      servPageC ++;
+      if(servC>=3){
+        servPageC=0;
+      }
+      servicePgnBtn.css('background','#fff');
+      servicePgnBtn.eq(servPageC).css('background','#276868');
+    },2000);
+  };
+  serviceAutoPlay();
+  servicePgn.click(function(){
+    serviceAutoStop();
+    var svcIndex = $(this).index();
+    servicePgnBtn.css('background','#fff');
+    $(this).children('a').css('background','#276868');
+    serviceUl.animate({left:-serviceLiWidth*svcIndex},400);
+  });
+  function serviceAutoStop(){
+    clearInterval(serviceAP);
+    serviceStop.css('display','none');
+    servicePlay.css('display','block');
+  }
+  serviceStop.click(function(){
+    serviceAutoStop();
+  });
+  servicePlay.click(function(){
+    serviceAutoPlay();
+    serviceStop.css('display','block');
+    servicePlay.css('display','none');
   })
 });
