@@ -233,5 +233,17 @@ $(function(){
     ExhAutoPlay();
     $('.nExh-play').css('display','none');
     $('.nExh-stop').css('display','block');
+  });
+
+  // notice top left tab menu
+  var noticeTab = $('.not-tab-btn');
+  var noticeBoard = $('.not-board-list');
+  noticeBoard.eq(0).css('display','block');
+  noticeTab.click(function(){
+    noticeTab.removeClass('not-tab-btn-on');
+    $(this).addClass('not-tab-btn-on');
+    noticeBoard.css('display','none');
+    var noticeTIndex = $(this).index();
+    noticeBoard.eq(noticeTIndex).css('display','block');
   })
 });

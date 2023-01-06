@@ -366,15 +366,12 @@
             display: inline-block;
             border-bottom: 1px solid #8e8e8e;
           }
-            .not-tab-radio{
+            .not-tab-btns{
               width: 80%;
               float: left;
               box-sizing: border-box;
             }
-              .not-tab-radio input{
-                display: none;
-              }
-              .not-tab-radio label{
+              .not-tab-btn{
                 display: block;
                 float: left;
                 width: 25%;
@@ -384,7 +381,7 @@
                 cursor: pointer;
                 color: #8e8e8e;
               }
-              .not-tab-radio input:checked + label{
+              .not-tab-btn-on{
                 color: #222;
                 font-weight: 700;
                 border-bottom: 4px solid #222;
