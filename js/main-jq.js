@@ -17,7 +17,7 @@ $(function(){
   //search
   var searchBtn = $('.search-btn');
   var searchLayer = $('.search-layer');
-  var searchClose = $('.sign-inner > .search-close');
+  var searchClose = $('.search-close');
   searchBtn.click(function(){
     searchLayer.stop().slideDown(400);
     searchBtn.css('display','none');
@@ -415,5 +415,14 @@ $(function(){
     directOpen.removeClass('direct-list-on');
     directList.stop().slideUp();
 
-  })
+  });
+
+  // mobile menu
+  var mobileOpen = $('.mobile-open');
+  var mobileWrap = $('.mobile-wrap');
+
+  mobileOpen.click(function(){
+    mobileWrap.toggleClass('mobile-wrap-on');
+    mobileOpen.toggleClass('mobile-open-on');
+  });
 });

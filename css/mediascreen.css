@@ -139,18 +139,65 @@
       width: 38px;
       margin-right: 20px;
     }
+    .mobile-header-btns .search-close{
+      display: none;
+      width: 33px;
+      margin-right: 20px;
+      margin-top: 3px;
+      margin-bottom: 2px;
+    }
     .mobile-open{
+      position: relative;
       display: inline-block;
-      width: 40px;
+      width: 38px;
+      height: 30px;
+      margin-bottom: 5px;
       border: none;
       background: transparent;
-      padding: 5px 0;
+      z-index: 9999;
     }
-      .mobile-open img{
+      .mobile-open > span{
+        position: absolute;
+        left: 0;
         display: block;
+        height: 3px;
+        background: #222;
+        transition: transform .4s, top .4s .4s, width .4s .8s;
+      }
+      .mobile-ham-top{
+        top: 0;
+        width: 100%;
+      }
+      .mobile-ham-mid{
+        top: 50%;
+        width: 50%;
+        transform: translateY(-50%);
+      }
+      .mobile-ham-bot{
+        top: 27px;
+        width: 80%;
+      }
+      .mobile-open-on .mobile-ham-top{
+        width: 100%;
+        top: 50%;
+        transform: rotate(45deg);
+        transition: width .4s ,top .4s .4s, transform .4s .8s;
+      }
+      .mobile-open-on .mobile-ham-mid{
+        width: 0;
+        transition: width .4s;
+      }
+      .mobile-open-on .mobile-ham-bot{
+        width: 100%;
+        top: 50%;
+        transform: rotate(-45deg);
+        transition: width .4s ,top .4s .4s, transform .4s .8s;
       }
   .mobile-wrap{
     display: none;
+  }
+  .mobile-wrap-on{
+    display: block;
   }
   .mobile-header-open{
     width: 90%;
@@ -206,14 +253,6 @@
             padding: 15px 0;
             font-size: 21px;
             font-weight: 500;
-          }
-        .mobile-close{
-          display: block;
-          float: right;
-          margin-top: 30px;
-        }
-          .mobile-close img{
-            display: block;
           }
     .quick-menu{
       margin-top: 50px;
