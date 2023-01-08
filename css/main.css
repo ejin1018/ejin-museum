@@ -730,7 +730,7 @@
           word-break: keep-all;
           background: #fff;
         }
-        .direct-list-open:focus{
+        .direct-list-on{
           color: #fff;
           background: #222;
         }
@@ -744,17 +744,22 @@
           border-right: 2px solid #222;
           transform: rotate(45deg);
           transform-origin: center;
-          transition: all .8s;
+          transition: all .4s;
+        }
+        .direct-list-on .direct-open-arrow{
+          margin-top: 7px;
+          border-bottom: 2px solid #fff;
+          border-right: 2px solid #fff;
+          transform: rotate(-135deg);
         }
         .direct-list{
-          visibility: hidden;
+          display: none;
           position: absolute;
           bottom: 100%;
           left: 0;
           width: 100%;
-          height: 0%;
+          height: auto;
           background: #222;
-          transition: all .4s;
           overflow: hidden;
           z-index: 99;
         }
