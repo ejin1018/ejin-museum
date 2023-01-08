@@ -120,7 +120,7 @@ $(function(){
         mainUl.css('left','0');
       }
       mainC ++ ;
-      mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*mainC)*2},400);
+      mainUl.stop().animate({'left':-(mainLiWidth*mainC)*2},400);
 
       pageC++;
       if(pageC >= mainLiLength){
@@ -318,6 +318,17 @@ $(function(){
     serviceStop.css('display','block');
     servicePlay.css('display','none');
   })
+
+  // notice bottom
+  $(window).scroll(function(){
+    if($(document).scrollTop() >= $('.notice-wrap').offset().top){
+      console.log($(document).scrollTop());
+      $('.not-bot-edu').animate({marginTop:'0%',opacity:1},400);
+      $('.not-bot-event').delay(200).animate({marginTop:'0%',opacity:1},400);
+      $('.not-bot-online').delay(400).animate({marginTop:'0%',opacity:1},400);
+    }
+  });
+  
 
   // notice musical slide
   var musicalTotal = $('.not-bot-event .slide-total');

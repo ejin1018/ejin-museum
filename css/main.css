@@ -533,6 +533,8 @@
       .not-bot-edu{
         width: 26%;
         margin-right: 4.5%;
+        margin-top: 3%;
+        opacity: 0;
       }
         .not-edu-btn{
           position: relative;
@@ -551,6 +553,8 @@
       .not-bot-event{
         width: 20%;
         margin-right: 4.5%;
+        margin-top: 3%;
+        opacity: 0;
       }
         .bot-event-slide{
           width: 100%;
@@ -577,6 +581,8 @@
             }
       .not-bot-online{
         width: 45%;
+        margin-top: 3%;
+        opacity: 0;
       }
           .notbot-exhibit-title > .not-tab-plus{
             float: none;
