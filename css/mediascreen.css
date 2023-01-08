@@ -116,6 +116,10 @@
   header, footer, [class*='-container']{
     width: 90%;
   }
+  .attention{
+    width: 80%;
+    padding: 35px 25px;
+  }
   .utility-wrap, .gnb-container{
     display: none;
   }
@@ -130,6 +134,9 @@
   }
   .logo-btn img{
     display: block;
+  }
+  .body-overflow{
+    overflow-y:hidden;
   }
   .mobile-header-btns{
     float: right;
@@ -352,6 +359,10 @@
         border-left: solid 3px #444;
         transform: rotate(-45deg);
         transition: all .4s;
+      }
+      .mMenu-arrow-up{
+        transform: rotate(135deg);
+        margin: 15px 5px 0 10px;
       }
     .mobile-mid-inner{
       display: none;
@@ -576,11 +587,23 @@
   .logo{
     width: 35%;
   }
-  .search-btn, .mobile-open{
+  .search-btn{
     width: 25px;
+  } 
+  .mobile-open > span{
+    height: 2px;
   }
-    .mobile-open img{
-      width: 100%;
+  .mobile-open{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0;
+  }
+    .mobile-ham-bot{
+      top: 22px;
+    }
+    .mobile-open-on .mobile-ham-top,
+    .mobile-open-on .mobile-ham-bot{
+      width: 110%;
     }
   .mobile-lang{
     width: 35%;
@@ -602,6 +625,9 @@
       border-bottom: solid 1px #fff;
       border-left: solid 1px #fff;
     } 
+  .mobile-header-btns .search-close{
+    width: 22px;
+  }
   .mobile-close{
     margin-top: 25px;
   }

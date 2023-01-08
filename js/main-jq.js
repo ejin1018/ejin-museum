@@ -22,11 +22,13 @@ $(function(){
     searchLayer.stop().slideDown(400);
     searchBtn.css('display','none');
     searchClose.css('display','inline-block');
+    $('body').addClass('body-overflow');
   });
   searchClose.click(function(){
     searchLayer.stop().slideUp(400);
     searchBtn.css('display','inline-block');
     searchClose.css('display','none');
+    $('body').removeClass('body-overflow');
   });
 
   // utility menu
@@ -420,9 +422,17 @@ $(function(){
   // mobile menu
   var mobileOpen = $('.mobile-open');
   var mobileWrap = $('.mobile-wrap');
+  var mobileMenu = $('.mobile-menu-list li');
 
   mobileOpen.click(function(){
     mobileWrap.toggleClass('mobile-wrap-on');
     mobileOpen.toggleClass('mobile-open-on');
+    $('body').toggleClass('body-overflow');
+  });
+  mobileMenu.click(function(){
+    $('.mobile-mid-inner').stop().slideUp();
+    $('.mMenu-arrow-down').removeClass('mMenu-arrow-up');
+    $(this).children('.mobile-menu-btn').children('.mMenu-arrow-down').toggleClass('mMenu-arrow-up');
+    $(this).children('.mobile-mid-inner').stop().slideDown();
   });
 });
