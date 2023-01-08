@@ -376,6 +376,10 @@ header{
       width: 25px;
       height: 25px;
     }
+    .body-overflow{
+      overflow-y:hidden;
+      height: 100vh;
+    }
 
 /* mobile-menu */
 .mobile-wrap{

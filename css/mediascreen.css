@@ -116,10 +116,6 @@
   header, footer, [class*='-container']{
     width: 90%;
   }
-  .attention{
-    width: 80%;
-    padding: 35px 25px;
-  }
   .utility-wrap, .gnb-container{
     display: none;
   }
@@ -135,9 +131,7 @@
   .logo-btn img{
     display: block;
   }
-  .body-overflow{
-    overflow-y:hidden;
-  }
+  
   .mobile-header-btns{
     float: right;
   }
