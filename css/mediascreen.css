@@ -51,7 +51,7 @@
     display: block;
   }
   /* notice */
-  .not-tab-radio label{
+  .not-tab-btn{
     font-size: 21px;
   }
   .not-tab-plus{
@@ -434,7 +434,7 @@
       margin-bottom: 50px;
       margin-right: 0;
     }
-      .not-tab-radio label{
+      .not-tab-btn{
         font-size: 28px;
       }
       .not-board-list > li{
@@ -759,10 +759,10 @@
       height: 30px;
       margin-right: 10px;
     }
-    .not-tab-radio{
+    .not-tab-btns{
       width: 100%;
     }
-      .not-tab-radio label{
+      .not-tab-btn{
         font-size: 18px;
       }
     .not-tab-plus{
