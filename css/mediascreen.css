@@ -506,6 +506,10 @@
     .footer-wrap{
       margin-top: 35px;
     }
+    .direct-inner .direct-title{
+      width: 100%;
+      margin-right: 0;
+    }
 }
 /* tablet */
 @media screen and (max-width:768px) {
