@@ -235,7 +235,7 @@ $(function(){
       count ++ ;
       ul.stop().animate({left:-liWidth*count},400);
       return false;
-    },2000)
+    },2500)
   }
   ExhAutoPlay();
   
@@ -295,7 +295,7 @@ $(function(){
       }
       servicePgnBtn.css('background','#fff');
       servicePgnBtn.eq(servPageC).css('background','#276868');
-    },2000);
+    },3000);
   };
   serviceAutoPlay();
   servicePgn.click(function(){
