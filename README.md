@@ -17,6 +17,7 @@
 
 ## 기획서
 > [기획서 보기](https://ejin1018.github.io/ejin-museum/project_proposal.pdf)
+
 ** 제작 동기
 ** 벤치마킹
 ** 전략 수립
@@ -28,10 +29,10 @@
 ## Technologies Used
 - HTML 5
 - CSS 3
-- J-Query 1.12.0
+- J-Query ver 1.12.0
 
 ## 작업 기간
-- 2022.12.05~ 2023.01.06(5주)
+- 2022.12.05~ 2023.01.06 (5주)
 
 ## 구현 기능
 - 
