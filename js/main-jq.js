@@ -10,6 +10,7 @@ $(function(){
     mainSlideInit();
     servSlideInit();
     musicalSlideInit();
+    onlineSlideInit();
   }
   function mainSlideInit(){
     var introWidth = parseInt($('.intro-container').width());
@@ -41,6 +42,14 @@ $(function(){
     $('.musical-slide').css('left','0');
     $('.musical-slide').css('width',$('.musical-slide li').width()*$('.musical-slide li').length);
     $('.not-bot-event .slide-now').text(musicalPageC);
+  }
+  function onlineSlideInit(){
+    var onlineWidth = $('.online-exhibit-slide').width();
+    $('.online-exhibit-list li').css('width',onlineWidth);
+    onlineC = 1;
+    $('.online-exhibit-list').css('margin-left',-$('.online-exhibit-list li').width());
+    $('.online-exhibit-list').css('width',$('.online-exhibit-list li').width()*$('.online-exhibit-list li').length);
+    $('.not-bot-online .slide-now').text(onlineC);
   }
   
   // top button
@@ -437,13 +446,13 @@ $(function(){
   onlineUl.css('margin-left',-onlineLiWidth);
   
   function onlineMoveNext(){
-    onlineUl.stop().animate({left:-onlineLiWidth},400,function(){
+    onlineUl.stop().animate({left:-$('.online-exhibit-list li').width()},400,function(){
       $('.online-exhibit-list li:first-child').appendTo(onlineUl);
       $('.online-exhibit-list').css('left','');
     });
   }
   function onlineMovePrev(){
-    onlineUl.stop().animate({left:onlineLiWidth},400,function(){
+    onlineUl.stop().animate({left:$('.online-exhibit-list li').width()},400,function(){
       $('.online-exhibit-list li:last-child').prependTo(onlineUl);
       onlineUl.css('left','');
     })
