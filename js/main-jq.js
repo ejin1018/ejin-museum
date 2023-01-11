@@ -9,6 +9,7 @@ $(function(){
   function slideResize(){
     mainSlideInit();
     servSlideInit();
+    musicalSlideInit();
   }
   function mainSlideInit(){
     var introWidth = parseInt($('.intro-container').width());
@@ -31,6 +32,15 @@ $(function(){
     $('.service-slide-pgn').css('background','#fff');
     $('.service-slide-pgn').eq(servPageC).css('background','#276868');
 
+  }
+  function musicalSlideInit(){
+    var eventWidth = parseInt($('.bot-event-slide').width());
+    $('.musical-slide li').css('width',eventWidth);
+    musicalC = 0;
+    musicalPageC = 1;
+    $('.musical-slide').css('left','0');
+    $('.musical-slide').css('width',$('.musical-slide li').width()*$('.musical-slide li').length);
+    $('.not-bot-event .slide-now').text(musicalPageC);
   }
   
   // top button
@@ -383,15 +393,15 @@ $(function(){
       musicalUl.css('left','0')
     }
     musicalC ++; 
-    musicalUl.stop().animate({left:-musicalLiWidth*musicalC},400);
+    musicalUl.stop().animate({left:-$('.musical-slide li').width()*musicalC},400);
   };
   function musicalMovePrev(){
     if(musicalC <= 0){
       musicalC = musicalLiLength;
-      musicalUl.css('left',-musicalLiWidth*musicalLiLength);
+      musicalUl.css('left',-$('.musical-slide li').width()*musicalLiLength);
     }
     musicalC --;
-    musicalUl.stop().animate({left:-musicalLiWidth*musicalC},400);
+    musicalUl.stop().animate({left:-$('.musical-slide li').width()*musicalC},400);
   }
   musicalNext.click(function(){
     musicalMoveNext();
