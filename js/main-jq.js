@@ -10,10 +10,8 @@ $(function(){
   });
   function slideResize(){
     introWidth = parseInt($('.intro-container').width());
-    mainLiResizeWidth = $('.main-exhibition-inner li').width();
 
     $('.main-exhibition-inner li').css('width',introWidth);
-    console.log('계산된'+$('.main-exhibition-inner li').width())
 
     mainC = 0;
     $('.main-exhibition-inner').css('left','0');
@@ -121,7 +119,6 @@ $(function(){
     mainPgn.append(pgnClone);
   }
   
-  var mainLiResizeWidth = $('.main-exhibition-inner li').width();
   
   var mainPgnBtn = mainPgn.children('span');
   
@@ -133,7 +130,6 @@ $(function(){
       }
       mainC ++ ;
       mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*mainC)},400);
-      // console.log(mainLiResizeWidth)
 
       pageC++;
       if(pageC >= mainLiLength){
@@ -150,10 +146,10 @@ $(function(){
     mainAutoStop();
     if(mainC <= 0){
       mainC = mainLiLength;
-      mainUl.css('left',-(mainLiResizeWidth*mainLiLength));
+      mainUl.css('left',-($('.main-exhibition-inner li').width()*mainLiLength));
     }
     mainC -- ;
-    mainUl.stop().animate({'left':-(mainLiResizeWidth*mainC)},400);
+    mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*mainC)},400);
     mainPgnBtn.css('background','#fff');
     mainPgnBtn.eq(mainC).css('background','#276868');
   });
@@ -164,7 +160,7 @@ $(function(){
       mainUl.css('left','0');
     }
     mainC ++ ;
-    mainUl.stop().animate({'left':-(mainLiResizeWidth*mainC)},400);
+    mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*mainC)},400);
 
     pageC++;
     if(pageC >= mainLiLength){
@@ -196,7 +192,7 @@ $(function(){
     $(this).css('background','#276868');
     var pgnC = $(this).index();
     console.log('paginationIndex'+pgnC);
-    mainUl.stop().animate({'left':-(mainLiResizeWidth*pgnC)},400);
+    mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*pgnC)},400);
   });
   
   // nation Exhibition
