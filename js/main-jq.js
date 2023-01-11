@@ -1,24 +1,36 @@
 $(function(){
 
   // window resize
-  var introWidth ;
-
-  // setInterval(slideResize,100);
   $(window).resize(function(){
     mainAutoStop();
+    serviceAutoStop();
     slideResize();
   });
   function slideResize(){
-    introWidth = parseInt($('.intro-container').width());
-
+    mainSlideInit();
+    servSlideInit();
+  }
+  function mainSlideInit(){
+    var introWidth = parseInt($('.intro-container').width());
     $('.main-exhibition-inner li').css('width',introWidth);
-
+  
     mainC = 0;
     pageC = 0;
     $('.main-exhibition-inner').css('left','0');
     $('.main-exhibition-inner').css('width',$('.main-exhibition-inner li').width()*$('.main-exhibition-inner li').length);
     $('.main-pagination').children('span').css('background','#fff');
     $('.main-pagination').children('span').eq(pageC).css('background','#276868');
+  }
+  function servSlideInit(){
+    var servWidth = parseInt($('.not-top-right').width());
+    $('.service-slide li').css('width',servWidth);
+    servC = 0;
+    servPageC = 0;
+    $('.service-slide').css('left','0');
+    $('.service-slide').css('width',$('.service-slide li').width()*$('.service-slide li').length);
+    $('.service-slide-pgn').css('background','#fff');
+    $('.service-slide-pgn').eq(servPageC).css('background','#276868');
+
   }
   
   // top button
@@ -200,7 +212,6 @@ $(function(){
     mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*pgnC)},400);
     mainC = pgnC ;
     pageC = pgnC ;
-    console.log('pgnC '+pgnC);
   });
   
   // nation Exhibition
@@ -304,7 +315,7 @@ $(function(){
         serviceUl.css('left','0');
       }
       servC ++;
-      serviceUl.animate({left:-serviceLiWidth*servC},400);
+      serviceUl.animate({left:-serviceLi.width()*servC},400);
 
       servPageC ++;
       if(servC>=3){
@@ -320,7 +331,9 @@ $(function(){
     var svcIndex = $(this).index();
     servicePgnBtn.css('background','#fff');
     $(this).children('a').css('background','#276868');
-    serviceUl.animate({left:-serviceLiWidth*svcIndex},400);
+    serviceUl.animate({left:-serviceLi.width()*svcIndex},400);
+    servC = svcIndex;
+    servPageC = svcIndex;
   });
   function serviceAutoStop(){
     clearInterval(serviceAP);
