@@ -119,11 +119,11 @@ $(function(){
     mainPgn.append(pgnClone);
   }
   
-  
   var mainPgnBtn = mainPgn.children('span');
   
   function mainAutoPlay(){
     mainAP = setInterval(function(){
+
       if(mainC >= mainLiLength){
         mainC = 0;
         mainUl.css('left','0');
@@ -168,8 +168,6 @@ $(function(){
     }
     mainPgnBtn.css('background','#fff');
     mainPgnBtn.eq(pageC).css('background','#276868');
-
-    console.log('mainIndex '+mainC)
   });
   
   function mainAutoStop(){
@@ -191,8 +189,9 @@ $(function(){
     mainPgnBtn.css('background','#fff');
     $(this).css('background','#276868');
     var pgnC = $(this).index();
-    console.log('paginationIndex'+pgnC);
     mainUl.stop().animate({'left':-($('.main-exhibition-inner li').width()*pgnC)},400);
+    mainC = pgnC ;
+    pageC = pgnC ;
   });
   
   // nation Exhibition
