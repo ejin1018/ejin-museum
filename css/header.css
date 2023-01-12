@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 body{
+  overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -377,7 +378,6 @@ header{
       height: 25px;
     }
     .body-overflow{
-      overflow-x:hidden;
       overflow-y:hidden;
       height: 100vh;
     }
@@ -438,13 +438,3 @@ header{
       background: #276868;
       border: 0 none;
     }
-  /* .search-close{
-    position: absolute;
-    top: 10px;
-    right: 35px;
-    width: 23px;
-    height: 23px;
-  }
-    .search-close img{
-      width: 100%;
-    } */

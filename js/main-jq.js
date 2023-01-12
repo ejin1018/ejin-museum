@@ -70,6 +70,7 @@ $(function(){
   var searchBtn = $('.search-btn');
   var searchLayer = $('.search-layer');
   var searchClose = $('.search-close');
+
   searchBtn.click(function(){
     searchLayer.stop().slideDown(400);
     searchBtn.css('display','none');
