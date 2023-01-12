@@ -747,6 +747,14 @@
       font-weight: 500;
       padding: 0 10px;
     }
+    .nation-poster{
+      height: 100%;
+    }
+      .nation-poster img{
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+      }
   .nation-title{
     font-weight: 500;
   }

@@ -5,6 +5,10 @@ $(function(){
     mainAutoStop();
     serviceAutoStop();
     slideResize();
+    if(window.innerWidth <=480){
+      ExhAutoStop();
+      nationSlideInit();
+    }  
   });
   function slideResize(){
     mainSlideInit();
@@ -51,6 +55,17 @@ $(function(){
     $('.online-exhibit-list').css('width',$('.online-exhibit-list li').width()*$('.online-exhibit-list li').length);
     $('.not-bot-online .slide-now').text(onlineC);
   }
+  function nationSlideInit(){
+    var nationWidth = $('.nationExh-inner').width();
+    console.log(nationWidth)
+    $('.nationExh-list li').css('width',nationWidth);
+    $('.nationExh-list li').css('margin-right','0');
+    count = 0;
+    $('.nationExh-list').css('left','0');
+    $('.nationExh-list').css('width', $('.nationExh-list li').width()* $('.nationExh-list li').length);
+  }
+  
+
   
   // top button
   var topBtn = $('.top-fix');
@@ -125,6 +140,11 @@ $(function(){
   botMenu.mouseleave(function(){
     midBtns.removeClass('gnb-mid-btn-on');
     $(this).stop().hide();
+  })
+  
+  $('.gnb-container').mouseleave(function(){
+    midBtns.removeClass('gnb-mid-btn-on');
+    botMenu.stop().hide();
   })
 
   // main slide
@@ -253,13 +273,11 @@ $(function(){
   $('.nExh-prev').click(function(){
     if(count <= 0){
       count = 6;
-      ul.css('left',-liWidth*6);
+      ul.css('left',-$('.nationExh-list li').width()*6);
     }
     count --;
-    ul.stop().animate({left:-liWidth*count},400);
-    clearInterval(ExhRotate);
-    $('.nExh-stop').css('display','none');
-    $('.nExh-play').css('display','block');
+    ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
+    ExhAutoStop();
   });
   $('.nExh-next').click(function(){
     if(count > 5){
@@ -267,10 +285,8 @@ $(function(){
       ul.css('left','0')
     }
     count ++ ;
-    ul.stop().animate({left:-liWidth*count},400);
-    clearInterval(ExhRotate);
-    $('.nExh-stop').css('display','none');
-    $('.nExh-play').css('display','block');
+    ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
+    ExhAutoStop();
   });
 
   let ExhRotate;
@@ -281,16 +297,19 @@ $(function(){
         ul.css('left','0')
       }
       count ++ ;
-      ul.stop().animate({left:-liWidth*count},400);
+      ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
       return false;
     },2500)
   }
   ExhAutoPlay();
-  
-  $('.nExh-stop').click(function(){
+  function ExhAutoStop(){
     clearInterval(ExhRotate);
     $('.nExh-stop').css('display','none');
     $('.nExh-play').css('display','block');
+  }
+  
+  $('.nExh-stop').click(function(){
+    ExhAutoStop();
   });
   $('.nExh-play').click(function(){
     ExhAutoPlay();
