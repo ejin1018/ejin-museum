@@ -86,17 +86,22 @@ $(function(){
   var searchLayer = $('.search-layer');
   var searchClose = $('.search-close');
 
+  var scrollBarWidth = window.outerWidth - window.innerWidth
+  console.log(scrollBarWidth);
+  
   searchBtn.click(function(){
     searchLayer.stop().slideDown(400);
     searchBtn.css('display','none');
     searchClose.css('display','inline-block');
     $('body').addClass('body-overflow');
+    $('body').css('padding-right',scrollBarWidth);
   });
   searchClose.click(function(){
     searchLayer.stop().slideUp(400);
     searchBtn.css('display','inline-block');
     searchClose.css('display','none');
     $('body').removeClass('body-overflow');
+    $('body').css('padding-right','0px');
   });
 
   // utility menu
