@@ -95,4 +95,20 @@ $(function(){
     $(this).children('.mobile-menu-btn').children('.mMenu-arrow-down').toggleClass('mMenu-arrow-up');
     $(this).children('.mobile-mid-inner').stop().slideDown();
   });
+
+  // footer 
+  var directWrap = $('.direct-title');
+  var directOpen = $('.direct-list-open');
+  var directList = $('.direct-list');
+  
+  directWrap.click(function(){
+    directOpen.removeClass('direct-list-on');
+    $(this).children('.direct-list-open').toggleClass('direct-list-on');
+    directList.stop().slideUp();
+    $(this).children('.direct-list').stop().slideDown();
+  });
+  directWrap.mouseleave(function(){
+    directOpen.removeClass('direct-list-on');
+    directList.stop().slideUp();
+  });
 })
