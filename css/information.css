@@ -59,3 +59,25 @@
       color: #222;
       font-size: 38px;
     }
+
+/* information content */
+.sub-today-info{
+  width: 100%;
+  display: inline-block;
+  padding: 100px 0;
+  background: url(/img/sub-info-today.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.today-info-time{
+  width: 60%;
+  float: left;
+}
+  .today-info-time > p,
+  .today-info-fee > p{
+    color: #fff;
+  }
+.today-info-fee{
+  width: 40%;
+  float: left;
+}
