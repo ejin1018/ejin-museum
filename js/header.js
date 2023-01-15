@@ -1,5 +1,4 @@
 $(function(){
-  console.log('header load');
 
   // top button
   var topBtn = $('.top-fix');
@@ -14,7 +13,6 @@ $(function(){
   var searchLayer = $('.search-layer');
   var searchClose = $('.search-close');
   var scrollBarWidth = window.outerWidth - window.innerWidth
-  console.log(scrollBarWidth);
   
   searchBtn.click(function(){
     searchLayer.stop().slideDown(400);

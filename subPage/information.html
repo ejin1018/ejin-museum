@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/layout.css">
   <script src='https://code.jquery.com/jquery-3.6.2.min.js'></script>
   <script src="../js/header.js"></script>
+  <script src="../js/subPage.js"></script>
 
 </head>
 <body>
@@ -1109,33 +1110,35 @@
           <section class="infos-time">
             <h3 class="infos-title">관람시간</h3>
             <div class="infos-text">
-              <p>월, 화, 목, 금, 일요일: 10:00 ~ 18:00 (입장 마감: 17:30)</p>
-              <p>수, 토요일: 10:00 ~ 21:00 (입장 마감: 20:30)</p>
+              <p><span>월, 화, 목, 금, 일요일:</span> 10:00 ~ 18:00 (입장 마감: 17:30)</p>
+              <p><span>수, 토요일:</span> 10:00 ~ 21:00 (입장 마감: 20:30)</p>
               <p class="infos-last-note">옥외 전시장(정원)은 오전 7시부터 관람하실 수 있습니다.</p>
             </div>
           </section>
           <section class="infos-time">
             <h3 class="infos-title">휴관일 및 휴실일</h3>
             <div class="infos-text">
-              <p>휴관일: 1월1일, 설날(1.22.), 추석(9.29.)</p>
-              <p>상설전시관 정기휴실일: 매년 4월, 11월(첫째 월요일)<br>
+              <p><span>휴관일:</span> 1월1일, 설날(1.22.), 추석(9.29.)</p>
+              <p><span>상설전시관 정기휴실일:</span> 매년 4월, 11월(첫째 월요일)<br>
                 상설전시관 내 특별전시실 휴실<br>
                 기획전시관(특별전시 미운영시 휴실), 야외전시장은 정상 개관</p>
-              <p class="infos-last-note">2023년 휴실일: 4.3.(월), 11.6.(월)</p>
+              <p class="infos-last-note"><span>2023년 휴실일:</span> 4.3.(월), 11.6.(월)</p>
             </div>
           </section>
           <section class="infos-time">
             <h3 class="infos-title">관람료</h3>
             <div class="infos-text">
               <div class="free-fee">
-                <p class="fee-btn">무료</p>
-                <p>상설전시관, 어린이박물관, 무료 특별전시 해당</p>
+                <p class="fee-btn fee-btn-free">무료</p>
+                <p class="fee-text">상설전시관, 어린이박물관, 무료 특별전시 해당</p>
               </div>
               <div class="paid-fee">
-                <p class="fee-btn">유료</p>
-                <p>유료 특별전시 해당</p>
-                <p>관람권 구입하는 곳: 기획전시실 앞 매표소</p>
-                <p>관람권 판매시간: 관람 종료 30분 전까지</p>
+                <p class="fee-btn fee-btn-paid">유료</p>
+                <div class="fee-text-box">
+                  <p class="fee-text">유료 특별전시 해당</p>
+                  <p class="fee-text"><span>관람권 구입하는 곳:</span> 기획전시실 앞 매표소</p>
+                  <p class="fee-text"><span>관람권 판매시간:</span> 관람 종료 30분 전까지</p>
+                </div>
               </div>
             </div>
           </section>
@@ -1144,14 +1147,14 @@
             <div class="infos-text">
               <p>초·중·고 학생단체(30명 이상)의 박물관 관람은 사전예약제로 운영합니다.<br>
                 (사전예약하지 않은 학생단체는 입장 불가)</p>
-              <a href="#" class="student-reserv">학생단체관람 예약 바로가기</a>
+              <a href="#" class="student-reserv">학생단체관람 예약 바로가기<span></span></a>
             </div>
           </section>
         </div>
         <div class="sub-infos-right">
           <ul class="infos-note-list">
             <li>
-              <p class="note-title">박물관 관람 시 유의사항</p>
+              <h3 class="note-title">박물관 관람 시 유의사항</h3>
             </li>
             <li>
               <p>마스크 착용 및 체온 측정 등 방역지침을 준수해주시기 바랍니다.</p>
