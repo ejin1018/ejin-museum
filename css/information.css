@@ -30,7 +30,7 @@
         width: 15px;
         height: 15px;
         margin-top: 5px;
-        background: url(/img/local_home.png) no-repeat;
+        background: url(../img/local_home.png) no-repeat;
         background-size: contain;
       }
         .local-order-home::before{
@@ -51,7 +51,7 @@
           left: -18px;
           width: 6px;
           height: 24px;
-          background: url(/img/local-arrow.png) no-repeat;
+          background: url(../img/local-arrow.png) no-repeat;
           background-size:contain;
         }
     .subPage-title{
@@ -65,7 +65,7 @@
   width: 100%;
   display: inline-block;
   padding: 100px 0;
-  background: url(/img/sub-info-today.jpg) no-repeat;
+  background: url(../img/sub-info-today.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
