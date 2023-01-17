@@ -242,6 +242,7 @@ header{
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    padding-bottom: 15px;
   }
     .logo{
       width: 14.5%;
