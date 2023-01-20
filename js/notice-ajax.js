@@ -1,11 +1,10 @@
 window.addEventListener('DOMContentLoaded',function(){
   let req = new XMLHttpRequest();
-  let alarmHere = '/js/notice-alarm.json'
+  let alarmHere = 'notice-alarm.json'
   req.open('GET',alarmHere);
   req.onreadystatechange = function(){
     if(req.readyState == 4 && req.status == 200){
       putText(this.responseText);
-      // console.log(this.responseText);
     }
   }
   req.send();
