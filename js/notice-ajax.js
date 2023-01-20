@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded',function(){
   let req = new XMLHttpRequest();
-  let alarmHere = 'notice-alarm.json'
+  let alarmHere = '/ejin-museum/js/notice-alarm.json'
   req.open('GET',alarmHere);
   req.onreadystatechange = function(){
     if(req.readyState == 4 && req.status == 200){
