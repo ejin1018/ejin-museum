@@ -197,10 +197,10 @@ $(function(){
   $('.nExh-prev').click(function(){
     if(count <= 0){
       count = 6;
-      ul.css('left',-$('.nationExh-list li').width()*6);
+      ul.css('left',-$('.nationExh-list li').outerWidth(true)*6);
     }
     count --;
-    ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
+    ul.stop().animate({left:-$('.nationExh-list li').outerWidth(true)*count},400);
     ExhAutoStop();
   });
   $('.nExh-next').click(function(){
@@ -209,7 +209,7 @@ $(function(){
       ul.css('left','0')
     }
     count ++ ;
-    ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
+    ul.stop().animate({left:-$('.nationExh-list li').outerWidth(true)*count},400);
     ExhAutoStop();
   });
 
@@ -221,7 +221,7 @@ $(function(){
         ul.css('left','0')
       }
       count ++ ;
-      ul.stop().animate({left:-$('.nationExh-list li').width()*count},400);
+      ul.stop().animate({left:-$('.nationExh-list li').outerWidth(true)*count},400);
       return false;
     },2500)
   }
