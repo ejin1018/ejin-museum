@@ -79,14 +79,20 @@ $(function(){
 
   // mobile menu
   var mobileOpen = $('.mobile-open');
+  var mobileClose = $('.mobile-close');
   var mobileWrap = $('.mobile-wrap');
   var mobileMenu = $('.mobile-menu-list li');
 
   mobileOpen.click(function(){
-    mobileWrap.toggleClass('mobile-wrap-on');
-    mobileOpen.toggleClass('mobile-open-on');
-    $('body').toggleClass('body-overflow');
+    mobileWrap.addClass('mobile-wrap-on');
+    mobileOpen.addClass('mobile-open-on');
+    $('body').addClass('body-overflow');
   });
+  mobileClose.click(function(){
+    mobileWrap.removeClass('mobile-wrap-on');
+    mobileOpen.removeClass('mobile-open-on');
+    $('body').removeClass('body-overflow');
+  })
   mobileMenu.click(function(){
     $('.mobile-mid-inner').stop().slideUp();
     $('.mMenu-arrow-down').removeClass('mMenu-arrow-up');
