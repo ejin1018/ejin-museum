@@ -534,6 +534,27 @@
       width: 100%;
       margin-right: 0;
     }
+  /* subPage - information */
+  .today-info-time{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .today-info-fee{
+    width: 100%;
+  }
+  .today-info-time > p, .today-info-fee > p{
+    padding: 0;
+    text-align: center;
+  }
+  .sub-infos-left{
+    width: 100%;
+  }
+  .sub-infos-right{
+    width: 100%;
+  }
+  .infos-note-list{
+    padding: 10% 0 0 0;
+  }
 }
 /* tablet */
 @media screen and (max-width:768px) {
@@ -848,4 +869,96 @@
         .personal, .useragree, .theway{
           font-size: 15px;
         }
+  /* subPage - information */
+  .subPage-lnb-wrap{
+    margin-top: 40px;
+  }
+  .sharing-service{
+    margin-bottom: 10px;
+  }
+  .sharing-list li{
+    margin-left: 15px;
+  }
+  .sharing-list li:first-child, .sharing-list li:nth-child(3){
+    display: none;
+  }
+  .sharing-btn{
+    width: 23px;
+  }
+  .sharing-btn img{
+    width: 100%;
+  }
+  .local-order-home{
+    width: 12px;
+    height: 12px;
+  }
+  .local-order-btn{
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .local-order-btn::before{
+    top: 6px;
+    left: -12px;
+  }
+  .subPage-title{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .sub-today-info{
+    padding: 40px 0;
+  }
+  .today-info-time{
+    margin-bottom: 30px;
+  }
+  .today-title{
+    font-size: 21px;
+  }
+  .today-info{
+    font-size: 45px;
+  }
+  .today-more{
+    font-size: 15px;
+  }
+  .sub-informations{
+    margin-top: 60px;
+  }
+  .infos-time{
+    padding: 30px 0;
+  }
+  .infos-title{
+    width: 100%;
+    font-size: 19px;
+  }
+  .infos-text{
+    width: 100%;
+    padding-top: 10px;
+  }
+  .infos-text > p{
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .free-fee{
+    margin-bottom: 20px;
+  }
+  .fee-btn{
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-right: 20px;
+  }
+  .free-fee .fee-text{
+    font-size: 14px;
+  }
+  .paid-fee .fee-text{
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .infos-note-list li .note-title{
+    font-size: 16px;
+  }
+  .infos-note-list li p{
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
