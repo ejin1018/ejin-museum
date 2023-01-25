@@ -1,9 +1,9 @@
 .head-fixed .gnb-container{
   position: fixed;
   top: 0;
-  background: #fff;
-  padding-top: 30px;
+  height: 120px;
   margin-top: 0;
+  background: #fff;
   z-index: 999;
 }
 .head-fixed .gnb-mid-inner{

@@ -267,8 +267,8 @@
           }
       .mobile-close{
         position: absolute;
-        right: -10px;
-        top: 42px;
+        right: 4px;
+        top: 40px;
         display: block;
         width: 30px;
       }
