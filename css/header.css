@@ -409,7 +409,6 @@ header{
   transform: translateX(-50%);
   width: 100%;
   height: 100vh;
-  margin-top: 15px;
   background: rgba(255,255,255,0.7);
   z-index: 99;
 }

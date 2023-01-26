@@ -12,7 +12,7 @@ $(function(){
   var searchBtn = $('.search-btn');
   var searchLayer = $('.search-layer');
   var searchClose = $('.search-close');
-  var scrollBarWidth = window.outerWidth - window.innerWidth
+  var scrollBarWidth = window.outerWidth - document.documentElement.clientWidth ;
   
   searchBtn.click(function(){
     searchLayer.stop().slideDown(400);
