@@ -145,6 +145,15 @@ header{
     margin-top: 15px;
     display: inline-block;
   }
+    .utility-weather{
+      display: inline-block;
+    }
+      .utility-weather p{
+        float: left;
+      }
+      .weather-local{
+        font-size: 14px;
+      }
     .utility-menu{
       float: right;
     }

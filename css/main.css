@@ -103,10 +103,10 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+    color: #222;
   }
     .mus-info-area{
       width: 78%;
-      margin-right: 2%;
       border-bottom: 3px solid #222;
     }
       .info-time, .info-fee{
