@@ -66,6 +66,7 @@ header,footer,[class*='-container']{
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(1px);
   z-index: 999;
 }
   .attention{
@@ -77,30 +78,67 @@ header,footer,[class*='-container']{
     padding: 50px 35px;
     background: #fff;
   }
+    .attention-title{
+      display: block;
+      margin-bottom: 5px;
+      color: #276868;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
     .attention-text{
       font-size: 1.1em;
+      font-weight: 300;
       line-height: 1.8;
       color: #444;
       word-break: keep-all;
     }
-      .attention-text span{
-        display: block;
-        margin-bottom: 5px;
-        color: #8e8e8e;
-        font-size: 0.9em;
+      .attention-text > span{
+        font-weight: 400;
+        position: relative;
       }
-  .layer-close{
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    width: 35px;
-    border: 0;
-    cursor: pointer;
-    background: transparent;
-  }
-    .layer-close img{
-      width: 100%;
+      .attention-text > span::after{
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: #276868;
+        opacity: .3;
+        z-index: -99;
+      }
+
+    .attention-close{
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+      .not-today{
+        display: block;
+        font-size: 0.9em;
+        color: #8e8e8e;
+      }
+        .not-today:hover{
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      .layer-close{
+        width: 20px;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        background: transparent;
+      }
+        .layer-close img{
+          width: 100%;
+          display: block;
+          transform: scale(1);
+          transition: all .4s;
+        }
+        .layer-close:hover img{
+          transform: scale(1.1);
+        }
 
 .top-fix{
   display: block;
