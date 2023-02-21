@@ -152,22 +152,38 @@ header{
       margin-right: 15px;
     }
       .weather-local{
-        font-size: 13px;
-        color: #444;
+        font-size: 12px;
+        font-weight: 100;
+        color: #222;
       }
       .weather-bottom{
         display: inline-block;
         width: 100%;
       }
         .weather-bottom > p{
-          color: #222;
           float: left;
           font-size: 14px;
           margin-right: 5px;
+          color: #222;
         }
-      .api-info{
-        float: left;
-      }
+        .weather-status{
+          display: flex;
+          align-items: center;
+        }
+          .weather-status > span{
+            font-size: 20px;
+            display: block;
+            margin-left: 5px;
+            color: #222;
+          }
+        .api-info{
+          float: left;
+        }
+        .api-info > span{
+          font-size: 20px;
+          display: block;
+          color: #FADA4E;
+        }
     .utility-menu{
       float: right;
     }
