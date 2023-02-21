@@ -4,6 +4,8 @@ window.addEventListener('DOMContentLoaded',function(){
   let closeBtn = document.querySelector('.layer-close');
   let visited
 
+  $('.attention').draggable();
+  
   function setCookie(name,value,seven){
     let date = new Date();
     date.setDate(date.getDate()+seven);
