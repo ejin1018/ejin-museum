@@ -1,18 +1,3 @@
-.head-fixed .gnb-container{
-  position: fixed;
-  top: 0;
-  height: 120px;
-  margin-top: 0;
-  padding-bottom: 0;
-  background: #fff;
-  z-index: 999;
-}
-.head-fixed .gnb-mid-inner{
-  top: 100px;
-}
-.cont-fixed{
-  padding-top: 55px;
-}
 .subPage-lnb-wrap{
   width: 100%;
   margin-top: 80px;

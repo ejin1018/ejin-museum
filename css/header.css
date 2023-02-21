@@ -243,6 +243,22 @@ header{
         width: 100%;
       }
       
+  .head-fixed .gnb-container{
+    position: fixed;
+    top: 0;
+    height: 120px;
+    margin-top: 0;
+    padding-bottom: 0;
+    background: #fff;
+    z-index: 99;
+  }
+  .head-fixed .gnb-mid-inner{
+    top: 100px;
+  }
+  .cont-fixed{
+    padding-top: 55px;
+  }
+
   .gnb-container{
     width: 100%;
     height: 55px;
@@ -402,7 +418,6 @@ header{
 .mobile-wrap{
   display: none;
   position: fixed;
-  top: 65px;
   left: 0;
   width: 100%;
   height: 100%;
