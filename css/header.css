@@ -141,18 +141,32 @@ header{
   display: none;
 }
   .utility-wrap{
-    width: 100%;
     margin-top: 15px;
     display: inline-block;
   }
+  .utility-container{
+    float: right;
+  }
     .utility-weather{
       display: inline-block;
+      margin-right: 15px;
     }
-      .utility-weather p{
-        float: left;
-      }
       .weather-local{
-        font-size: 14px;
+        font-size: 13px;
+        color: #444;
+      }
+      .weather-bottom{
+        display: inline-block;
+        width: 100%;
+      }
+        .weather-bottom > p{
+          color: #222;
+          float: left;
+          font-size: 14px;
+          margin-right: 5px;
+        }
+      .api-info{
+        float: left;
       }
     .utility-menu{
       float: right;

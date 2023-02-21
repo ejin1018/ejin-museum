@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded',function(){
     // castEl.classList.add('test');
     // castBox.appendChild(castEl);
     // castEl.appendChild(tr);
-    console.log(datas);
+    // console.log(datas);
     let cast={
       rain: datas[0].obsrValue,
       rainInfo: function(){
@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded',function(){
       ny:datas[0].ny,
       loc:function(){
         let point = [this.nx, this.ny];
-        console.log(point);
+        // console.log(point);
         if(point[0] == 60 && point[1] == 127){
           locText = '서울특별시'
         }
@@ -76,9 +76,11 @@ window.addEventListener('DOMContentLoaded',function(){
 
     castBox.innerHTML=`
       <p class="weather-local">${locText}</p>
-      <p class="weather-status">${statusText}${rainIcon}</p>
-      <p class="weather-temp">${cast.temperature}˚</p>
-      <a href="https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084"><span class="material-symbols-outlined">info</span></a>
+      <div class="weather-bottom">
+        <p class="weather-status">${statusText}${rainIcon}</p>
+        <p class="weather-temp">${cast.temperature}˚</p>
+        <a href="https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084" class="api-info"><span class="material-symbols-outlined">info</span></a>
+      </div>
     `;
   }
   setPosts();
