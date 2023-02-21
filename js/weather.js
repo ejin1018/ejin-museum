@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded',function(){
       <div class="weather-bottom">
         <p class="weather-status">${statusText}${rainIcon}</p>
         <p class="weather-temp">${cast.temperature}˚</p>
-        <a href="https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084" class="api-info"><span class="material-symbols-outlined">info</span></a>
+        <a href="https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084" class="api-info" target="_blank" title="공공 데이터 포털 홈페이지로 이동"><span class="material-symbols-outlined">info</span></a>
       </div>
     `;
   }

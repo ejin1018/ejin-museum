@@ -8,6 +8,9 @@
   .intro-container{
     width: 100%;
   }
+  .utility-container{
+    float: none;
+  }
   .gnb-container{
     width: 100%;
     padding: 0 1.5%;

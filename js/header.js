@@ -65,14 +65,23 @@ $(function(){
   });
 
   // main menu
-  var topBtns = $('.gnb-top-btn');
-  var midMenu = $('.gnb-mid-list');
-  var midBtns = $('.gnb-mid-btn');
-  var botMenu = $('.gnb-bot-list');
+  var gnbCont = $('.gnb-container'); //rosybrown
+  var topBtns = $('.gnb-top-btn'); //lemon
+  var midMenu = $('.gnb-mid-list'); //lightseagreen
+  var midBtns = $('.gnb-mid-btn'); //lightblue
+  var botMenu = $('.gnb-bot-list'); //lavendar
+
   topBtns.mouseenter(function(){
     midMenu.stop().hide();
+    botMenu.stop().hide();
+    midBtns.removeClass('gnb-mid-btn-on');
     $(this).next('.gnb-mid-inner').children('.gnb-mid-list').stop().show();
   });
+  gnbCont.mouseleave(function(){
+    midMenu.stop().hide();
+    midBtns.removeClass('gnb-mid-btn-on');
+    botMenu.stop().hide();
+  })
   midBtns.mouseenter(function(){
     botMenu.stop().hide();
     midBtns.removeClass('gnb-mid-btn-on');
@@ -81,15 +90,6 @@ $(function(){
   })
   botMenu.mouseenter(function(){
     $(this).prev('gnb-mid-btn').addClass('gnb-mid-btn-on');
-  })
-  botMenu.mouseleave(function(){
-    midBtns.removeClass('gnb-mid-btn-on');
-    $(this).stop().hide();
-  })
-  
-  $('.gnb-container').mouseleave(function(){
-    midBtns.removeClass('gnb-mid-btn-on');
-    botMenu.stop().hide();
   })
 
   // mobile menu
