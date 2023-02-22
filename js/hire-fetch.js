@@ -23,26 +23,6 @@ queryParams += '&' + encodeURIComponent('pagesize') + '=' + encodeURIComponent('
 async function getPosts(){
   const res = await fetch(`${url}${queryParams}`);
   const data = await res.text();
-  console.log(data);
-  return data;
+  console.log(data)
 }
 getPosts();
-
-async function setPosts(){
-  const posts = await getPosts();
-  const datas = posts.response.body.items.item;
-  // console.log(posts.response.body);
-  // console.log(datas);
-  // console.log(posts.response.body.dataType);
-  datas.forEach((data)=>{
-    const postEl = document.createElement('div');
-    postEl.classList.add('post');
-    postEl.innerHTML = `
-      <div class="number">측정시간: ${data.baseTime}</div>
-      <h2 class="post-title">카테고리: ${data.category}</h2>
-      <div class="post-body">측정값: ${data.obsrValue}</div>
-    `;
-    document.body.appendChild(postEl);
-  })
-}
-// setPosts();
