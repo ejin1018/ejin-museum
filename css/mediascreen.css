@@ -146,6 +146,9 @@
       width: 38px;
       margin-right: 20px;
     }
+      .search-btn-hide{
+        display: none;
+      }
     .mobile-header-btns .search-close{
       display: none;
       width: 33px;

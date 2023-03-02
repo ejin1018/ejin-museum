@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded',function(){
     '<span class="material-symbols-outlined">rainy</span>',
     '<span class="material-symbols-outlined">weather_snowy</span>',
   ];
-  let url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/';
+  let url = 'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/';
   let params = {
     type:['getUltraSrtNcst','getVilageFcst'],
     key:'1U68dCesqZDzYQQxIj7dEzXXdToH3ND46dJ9R3dNQOpnFVLji7MSwMISOK6D13cKvk7q6hJxd55dsCbu852WaA%3D%3D',

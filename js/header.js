@@ -100,6 +100,7 @@ $(function(){
   mobileOpen.click(function(){
     mobileWrap.toggleClass('mobile-wrap-on');
     mobileOpen.toggleClass('mobile-open-on');
+    $('.search-btn').toggleClass('search-btn-hide');
     $('body').toggleClass('body-overflow');
   });
   mobileMenu.click(function(){
