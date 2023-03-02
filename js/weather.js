@@ -25,23 +25,15 @@ window.addEventListener('DOMContentLoaded',function(){
     ny:'127'
   }
   url=`${url}${params.type[0]}?serviceKey=${params.key}&pageNo=${params.pageNo}&numOfRows=${params.numOfRows}&dataType=${params.dataType}&base_date=${params.baseDate}&base_time=${params.baseTime}&nx=${params.nx}&ny=${params.ny}`
-  // console.log(url);
 
   async function getPosts(){
     const res = await fetch(url);
     const data = await res.json();
-    // console.log(data)
     return data;
   }
   async function setPosts(){
     const posts = await getPosts();
     const datas = posts.response.body.items.item;
-    // const castEl = document.createElement('div');
-    // const tr = document.createElement('tr');
-    // castEl.classList.add('test');
-    // castBox.appendChild(castEl);
-    // castEl.appendChild(tr);
-    // console.log(datas);
     let cast={
       rain: datas[0].obsrValue,
       rainInfo: function(){
@@ -65,7 +57,6 @@ window.addEventListener('DOMContentLoaded',function(){
       ny:datas[0].ny,
       loc:function(){
         let point = [this.nx, this.ny];
-        // console.log(point);
         if(point[0] == 60 && point[1] == 127){
           locText = '서울특별시'
         }
